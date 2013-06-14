@@ -1,0 +1,149 @@
+/* Order list */
+
+.order-list-element {
+  padding-left: 60px;
+  background-position: 5px 3px;
+  background-repeat: no-repeat;
+
+  .orderId {
+    color: #9fda52;
+  }
+
+  .customer {
+    color: #3399cc;
+  }
+
+  .total {
+    color: #d9541e;
+  }
+
+  &.order-Individual {
+    background-image: url("../assets/icon_Individual.png");
+  }
+
+  &.order-Enterprise {
+    background-image: url("../assets/icon_Enterprise.png");
+  }
+
+  &.order-SMB {
+    background-image: url("../assets/icon_SMB.png");
+  }
+
+  &.order-Team {
+    background-image: url("../assets/icon_Team.png");
+  }
+
+}
+
+/* Order detail */
+
+.order-detail-header {
+
+  .orderId, .orderDate {
+    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 55px;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  .orderId {
+    color: #9fda52;
+    background-image: url("../assets/icon_package.png");
+  }
+
+  .orderDate {
+    color: #d9541e;
+    background-image: url("../assets/icon_calendar.png");
+  }
+
+}
+
+/* Pack you an item */
+
+.item-pick-thumbnail {
+  margin: 10px;
+  max-height: 130px;
+  border: 1px solid #999;
+}
+
+/* Item list */
+
+.list-item {
+
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+  .product-thumbnail {
+    float: right;
+    max-height: 100px;
+    border: 1px solid #999;
+  }
+
+  .product-name {
+    font-size: 22px;
+  }
+
+  .product-info {
+
+    margin-top: 1em;
+
+    > div {
+      float: left;
+      margin-right: .5em;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+    }
+
+    .per-unit-price {
+      color: #fff;
+      background-color: #3c3;
+    }
+
+    .quantity-ordered {
+      color: #fff;
+      background-color: #39c;
+    }
+
+    .quantity-in-stock {
+      color: #fff;
+      background-color: #888;
+    }
+
+    .quantity-needed {
+      color: #fff;
+      background-color: #d9541e;
+    }
+
+    .product-location {
+      color: #000;
+      background-color: #fff;
+    }
+
+  }
+
+}
+
+/* Item detail */
+
+.item-detail {
+  padding: 1em;
+}
+
+.item-pack {
+
+  padding: 1em;
+  text-align: center;
+
+  .product-thumbnail {
+    border: 1px solid #999;
+  }
+
+}

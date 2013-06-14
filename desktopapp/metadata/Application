@@ -1,0 +1,33 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Customer",
+            "Order",
+            "LineItem",
+            "Item",
+            "CustomerCategory",
+            "PeriodTotal"
+        ],
+        "views": [
+            "Customers",
+            "CustomerDetail",
+            "MoneyColumn",
+            "OrderDetail",
+            "ContactInfo",
+            "Main",
+            "Breadcrumbs"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "MainController"
+        ],
+        "name": "Orders"
+    },
+    "designerId": "application"
+}

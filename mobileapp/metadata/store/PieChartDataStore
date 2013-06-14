@@ -1,0 +1,69 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "data": [
+            "[{\"category\":\"Enterprise\",\"total\":9069.236862182617},{\"category\":\"Individual\",\"total\":9935.107162475586},{\"category\":\"SMB\",\"total\":3982.4629821777344},{\"category\":\"Team\",\"total\":2638.354949951172}]"
+        ],
+        "storeId": "pieChartDataStore",
+        "designer|userClassName": "PieChartDataStore"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "ee986cef-4f0f-4c7b-8d03-4a344849168f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXOrders.getPieChartData"
+            },
+            "designerId": "696a546e-e329-4a22-858c-d384b77572a5",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "96fe2004-9cb5-4c5e-8b81-1b0c12e7612c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "category"
+            },
+            "designerId": "a5a6113f-2940-4649-86e9-7dbb3c08c5a3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "total"
+            },
+            "designerId": "9e9d9752-5293-4967-8a5b-5c9c4b77090a"
+        }
+    ]
+}

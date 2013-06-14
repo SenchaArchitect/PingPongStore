@@ -1,0 +1,76 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": null,
+        "ui": null,
+        "designer|userClassName": "Punch",
+        "designer|userAlias": "punch"
+    },
+    "designerId": "d77482ba-7d7c-47f3-b76e-e1d43dcee903",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": true,
+                "cls": [
+                    "punchButton"
+                ],
+                "id": null,
+                "itemId": "punchInButton",
+                "ui": "action",
+                "iconCls": "arrow_right",
+                "text": "Punch in"
+            },
+            "designerId": "29350698-fe0a-4bb1-ac4c-1ca8d1928294"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": true,
+                "cls": [
+                    "punchButton"
+                ],
+                "disabled": false,
+                "id": null,
+                "itemId": "punchOutButton",
+                "ui": "action",
+                "iconCls": "arrow_left",
+                "text": "Punch out"
+            },
+            "designerId": "cc7d1f78-293b-4e99-9d01-695141374c0d"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": false,
+                "cls": [
+                    "punchTime"
+                ],
+                "html": null,
+                "id": null,
+                "itemId": "punchTime"
+            },
+            "designerId": "451c3e52-ed03-4d81-bede-9c854c3cf75e"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[{",
+            "    itemId: 1002,",
+            "    name: 'Nittaku 3-Star Balls (One Dozen)',",
+            "    description: 'The Nittaku 3-Star 40mm ball is a high quality 3-star ball, exceeding the highest standards for ITTF approval. This ball is made in China, as are virtually all 3-Star balls of the major brands. Label on ball says \"40\" and \"Japan\". Packaged in boxes of 3 balls. Available in white or orange.',",
+            "    imgUrl: 'balls/nittaku3.jpg',",
+            "    quantityInStock: 50,",
+            "    bin: 'B',",
+            "    lot: 4,",
+            "    perUnitPrice: 17.95",
+            "},{",
+            "    itemId: 1009,",
+            "    name: 'Butterfly Home Rollaway',",
+            "    description: 'The Home Rollaway tables are Butterfly\\'s most lightweight and economical home use playback tables ever! They are ideal for the garage or basement. Two safety levers on each table side provide an effective child safety feature. Folds into playback and storage positions. This table includes a two year warranty against factory defective merchandise.',",
+            "    imgUrl: 'tables/tbhom.jpg',",
+            "    quantityInStock: 50,",
+            "    bin: 'T',",
+            "    lot: 5,",
+            "    perUnitPrice: 499.99",
+            "}]"
+        ],
+        "model": "Item",
+        "storeId": "itemsStore",
+        "designer|userClassName": "ItemsStore"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "e102c084-4522-4fb5-99b1-a83474e0143c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXInventory.getItems",
+                "paramsAsHash": false
+            },
+            "designerId": "e7c3c6e0-b9bd-45e5-b40d-6de66f58a765",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "e65f959c-bb47-41e1-9705-fd1555bed5a2"
+                }
+            ]
+        }
+    ]
+}

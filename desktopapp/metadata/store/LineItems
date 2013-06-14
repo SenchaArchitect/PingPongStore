@@ -1,0 +1,43 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "LineItem",
+        "storeId": "LineItems",
+        "designer|userClassName": "LineItems",
+        "data": [
+            "",
+            "[",
+            "    {id:1001, quantityOrdered:100, perUnitPrice:500, itemId:1, totalPrice: 50000, itemName: 'First Item'}, ",
+            "    {id:1002, quantityOrdered:100, perUnitPrice:299, itemId:2, totalPrice: 29900, itemName: 'Second Item'}",
+            "]",
+            ""
+        ]
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "375c4347-e3d7-4867-9fee-966c0c19ed9a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXCustomers.getLineItems",
+                "paramOrder": [
+                    "orderId"
+                ]
+            },
+            "designerId": "6a5debc1-19f9-41cc-a993-8957d3880740"
+        }
+    ]
+}

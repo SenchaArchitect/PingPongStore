@@ -1,0 +1,67 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "    {",
+            "        \"employeeId\": 1,",
+            "        \"name\": \"Ron Burgundy\",",
+            "        \"title\":\"CEO\"",
+            "    },",
+            "    {",
+            "        \"employeeId\": 2,",
+            "        \"name\": \"Brian Fantana\",",
+            "        \"title\": \"Inventory manager\"",
+            "    },",
+            "    {",
+            "        \"employeeId\": 3,",
+            "        \"name\": \"Champ Kind\",",
+            "        \"title\": \"Associate\"",
+            "    },",
+            "    {",
+            "        \"employeeId\": 4,",
+            "        \"name\": \"Brick Tamland\",",
+            "        \"title\": \"Associate\"",
+            "    }",
+            "]"
+        ],
+        "model": "Employee",
+        "storeId": "employeesStore",
+        "designer|userClassName": "EmployeesStore"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "f7d24ff3-bd52-4fb7-a1be-c58ac1731429",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXEmployees.getEmployees"
+            },
+            "designerId": "46769f8a-1903-4260-81f7-c4313a559ee0",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "4e738f72-0d71-4e1f-9edd-1481e914d829"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "DEFAULT_PORT": 3000,
+
+    "MySQL_HOSTNAME": "127.0.0.1",
+    "MySQL_PORT": 3306,
+    "MySQL_USER": "root",
+    "MySQL_PASSWORD": "thetestpassword",
+    "MySQL_DB": "orders",
+
+    "EXTDIRECT_NAMESPACE" : "Fulfill.ss",
+    "EXTDIRECT_API_NAME" : "REMOTING_API",
+    "EXTDIRECT_PATH" : "/direct",
+    "EXTDIRECT_PREFIX" : "DX"
+}

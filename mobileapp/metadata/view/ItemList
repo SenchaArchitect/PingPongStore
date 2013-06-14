@@ -1,0 +1,88 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ItemList",
+        "designer|userAlias": "itemlist",
+        "disableSelection": true,
+        "emptyText": "No items, but you look dashing all the same.",
+        "store": "itemsStore",
+        "onItemDisclosure": null
+    },
+    "designerId": "c6723c85-9564-4797-b897-cf39e2c62790",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableFormats": true,
+                "implHandler": [
+                    "<div class=\"list-item\">",
+                    "",
+                    "    <img class=\"product-thumbnail\" src=\"imgs/{imgUrl}\" />",
+                    "    ",
+                    "    <div class=\"product-name\">#{itemId}: {name}</div>",
+                    "    ",
+                    "    <div class=\"product-info\">",
+                    "        <div class=\"per-unit-price\">${perUnitPrice}</div>",
+                    "        <div class=\"quantity-in-stock\">{quantityInStock} in stock</div>",
+                    "    </div>",
+                    "",
+                    "</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "3f7f2654-a2e7-47c8-b86c-0ea87b54a567",
+            "cn": [
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "usMoney",
+                        "implHandler": [
+                            "return '$' + num.toFixed(2);"
+                        ]
+                    },
+                    "designerId": "ad6885ab-65e0-460b-b06b-d63c089e9105"
+                }
+            ]
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "4583d914-ee50-4662-bce2-727df97d0e70"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "segbuttontap",
+                "params": [
+                    "category",
+                    "pressed"
+                ]
+            },
+            "designerId": "7edad1d6-1fb6-40a1-b78c-1bcad29bec0b"
+        }
+    ]
+}

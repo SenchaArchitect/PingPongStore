@@ -1,0 +1,59 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeItem": null,
+        "designer|userClassName": "TabPanel",
+        "designer|userAlias": "tabpanel"
+    },
+    "designerId": "7d62b5d6-d19a-46c9-b694-db79416c99eb",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "b69814c5-2ea3-468d-ab92-2e40b3fc5070"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Punch",
+                "title": "Punch",
+                "iconCls": "add"
+            },
+            "designerId": "ac7ef2a1-528d-4fb5-bef7-e8c0a1108374",
+            "masterInstanceId": "d77482ba-7d7c-47f3-b76e-e1d43dcee903"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "punchListButton",
+                "designer|displayName": "Punch list",
+                "title": "Punches",
+                "iconCls": "bookmarks"
+            },
+            "designerId": "e1a56a20-198b-4fe2-8379-846009a88f68",
+            "masterInstanceId": "b33ea84b-a124-428a-a70a-8ae3b1defb79"
+        }
+    ]
+}

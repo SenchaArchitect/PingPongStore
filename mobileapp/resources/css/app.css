@@ -1,0 +1,138 @@
+/* Order list */
+/* line 3, ../sass/app.scss */
+.order-list-element {
+  padding-left: 60px;
+  background-position: 5px 3px;
+  background-repeat: no-repeat;
+}
+/* line 8, ../sass/app.scss */
+.order-list-element .orderId {
+  color: #9fda52;
+}
+/* line 12, ../sass/app.scss */
+.order-list-element .customer {
+  color: #3399cc;
+}
+/* line 16, ../sass/app.scss */
+.order-list-element .total {
+  color: #d9541e;
+}
+/* line 20, ../sass/app.scss */
+.order-list-element.order-Individual {
+  background-image: url("../assets/icon_Individual.png");
+}
+/* line 24, ../sass/app.scss */
+.order-list-element.order-Enterprise {
+  background-image: url("../assets/icon_Enterprise.png");
+}
+/* line 28, ../sass/app.scss */
+.order-list-element.order-SMB {
+  background-image: url("../assets/icon_SMB.png");
+}
+/* line 32, ../sass/app.scss */
+.order-list-element.order-Team {
+  background-image: url("../assets/icon_Team.png");
+}
+
+/* Order detail */
+/* line 42, ../sass/app.scss */
+.order-detail-header .orderId, .order-detail-header .orderDate {
+  font-size: 22px;
+  padding-top: 10px;
+  padding-left: 55px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+/* line 50, ../sass/app.scss */
+.order-detail-header .orderId {
+  color: #9fda52;
+  background-image: url("../assets/icon_package.png");
+}
+/* line 55, ../sass/app.scss */
+.order-detail-header .orderDate {
+  color: #d9541e;
+  background-image: url("../assets/icon_calendar.png");
+}
+
+/* Pack you an item */
+/* line 64, ../sass/app.scss */
+.item-pick-thumbnail {
+  margin: 10px;
+  max-height: 130px;
+  border: 1px solid #999;
+}
+
+/* Item list */
+/* line 74, ../sass/app.scss */
+.list-item:before, .list-item:after {
+  content: " ";
+  display: table;
+}
+/* line 78, ../sass/app.scss */
+.list-item:after {
+  clear: both;
+}
+/* line 82, ../sass/app.scss */
+.list-item .product-thumbnail {
+  float: right;
+  max-height: 100px;
+  border: 1px solid #999;
+}
+/* line 88, ../sass/app.scss */
+.list-item .product-name {
+  font-size: 22px;
+}
+/* line 92, ../sass/app.scss */
+.list-item .product-info {
+  margin-top: 1em;
+}
+/* line 96, ../sass/app.scss */
+.list-item .product-info > div {
+  float: left;
+  margin-right: .5em;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+/* line 105, ../sass/app.scss */
+.list-item .product-info .per-unit-price {
+  color: #fff;
+  background-color: #3c3;
+}
+/* line 110, ../sass/app.scss */
+.list-item .product-info .quantity-ordered {
+  color: #fff;
+  background-color: #39c;
+}
+/* line 115, ../sass/app.scss */
+.list-item .product-info .quantity-in-stock {
+  color: #fff;
+  background-color: #888;
+}
+/* line 120, ../sass/app.scss */
+.list-item .product-info .quantity-needed {
+  color: #fff;
+  background-color: #d9541e;
+}
+/* line 125, ../sass/app.scss */
+.list-item .product-info .product-location {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Item detail */
+/* line 136, ../sass/app.scss */
+.item-detail {
+  padding: 1em;
+}
+
+/* line 140, ../sass/app.scss */
+.item-pack {
+  padding: 1em;
+  text-align: center;
+}
+/* line 145, ../sass/app.scss */
+.item-pack .product-thumbnail {
+  border: 1px solid #999;
+}

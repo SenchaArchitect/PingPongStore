@@ -1,0 +1,29 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Punch",
+            "Employee"
+        ],
+        "stores": [
+            "EmployeesStore",
+            "PunchesStore"
+        ],
+        "views": [
+            "MainNavView",
+            "TabPanel",
+            "PunchList",
+            "Punch"
+        ],
+        "controllers": [
+            "NavController"
+        ],
+        "name": "Timecard"
+    },
+    "designerId": "application"
+}

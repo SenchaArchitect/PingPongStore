@@ -1,0 +1,13 @@
+{
+    "type": "directresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "direct",
+        "url": "/directapi"
+    },
+    "designerId": "e70d6d20-a042-4f16-aaf7-5f1e7e5178ac"
+}

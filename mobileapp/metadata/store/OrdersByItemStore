@@ -1,0 +1,83 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[{",
+            "    orderId: '45218',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Gregg Brownstone',",
+            "    state: 'NY',",
+            "    total: '$1078.12',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '45219',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Small Medium',",
+            "    state: 'NY',",
+            "    total: '$34.98',",
+            "    category: 'SMB'",
+            "},{",
+            "    orderId: '45220',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Mary Wittman',",
+            "    state: 'NY',",
+            "    total: '$214.12',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '45221',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Marcus Jones',",
+            "    state: 'NY',",
+            "    total: '$47.35',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '45222',",
+            "    orderDate: '2/212/2013',",
+            "    name: 'Susan Freidman',",
+            "    state: 'NY',",
+            "    total: '$336.40',",
+            "    category: 'Individual'",
+            "}]"
+        ],
+        "model": "Orders",
+        "storeId": "ordersByItemStore",
+        "designer|userClassName": "OrdersByItemStore"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "2011444f-0b89-4857-9dff-c93b7e306911",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXInventory.getOrdersByItem",
+                "paramOrder": [
+                    "itemId"
+                ]
+            },
+            "designerId": "9bfa8575-a0b3-4722-a9cf-86d95300331b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "9575d499-7fe8-4c63-ac58-ac0416454976"
+                }
+            ]
+        }
+    ]
+}

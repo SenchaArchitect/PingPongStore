@@ -1,0 +1,129 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "data": [
+            "[{\"Team\":266.6449890136719,\"totaledOrderDate\":\"2012-10-02\"},{\"Enterprise\":7884.83984375,\"totaledOrderDate\":\"2012-11-03\"},{\"Individual\":534.989990234375,\"totaledOrderDate\":\"2012-11-09\"},{\"SMB\":229.3979949951172,\"totaledOrderDate\":\"2012-12-03\"},{\"SMB\":1179.6500244140625,\"totaledOrderDate\":\"2012-12-05\"},{\"SMB\":204.69500732421875,\"totaledOrderDate\":\"2012-12-12\"},{\"Enterprise\":1184.3970184326172,\"totaledOrderDate\":\"2013-03-02\",\"Individual\":9400.117172241211,\"SMB\":154.74200439453125},{\"SMB\":2213.9779510498047,\"totaledOrderDate\":\"2013-03-03\",\"Team\":2371.7099609375}]"
+        ],
+        "storeId": "salesHistoryStore",
+        "designer|userClassName": "SalesHistoryStore",
+        "designer|userAlias": null
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "6ad1e93f-d9cc-4d00-9fcd-4f0c82fdd62a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXOrders.getSalesHistoryData",
+                "paramOrder": [
+                    "category"
+                ],
+                "paramsAsHash": null
+            },
+            "designerId": "2adf008c-204c-4932-9543-73babcbc653b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "8dd91c87-ec01-4b53-8469-5bcbd378869d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "Y-m-d",
+                "name": "totaledOrderDate",
+                "sortType": null,
+                "type": "date"
+            },
+            "designerId": "0c1e6bc9-3080-4df2-b2bf-6c1ec4b59e69"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "SMB",
+                "type": "float"
+            },
+            "designerId": "6222bb96-d330-46f9-b1e1-39ce11a4d759"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Team",
+                "type": "float"
+            },
+            "designerId": "7a604889-cdce-4aa4-88c6-f4be97b6e443"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Individual",
+                "type": "float"
+            },
+            "designerId": "d41391a3-44fb-40e5-a3de-b79543d97b7e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Enterprise",
+                "type": "float"
+            },
+            "designerId": "683d3c26-9bd6-43e3-bc7e-7d133e0a91ee"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "totaledOrderDate"
+            },
+            "designerId": "8324d9fe-738e-404a-b284-a9f8f4cfdfc0"
+        }
+    ]
+}

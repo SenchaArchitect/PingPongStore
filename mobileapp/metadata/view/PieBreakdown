@@ -1,0 +1,44 @@
+{
+    "type": "Ext.chart.PolarChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PieBreakdown",
+        "designer|userAlias": "pieBreakdown",
+        "colors": [
+            "[\"#444444\", \"#138CBF\", \"#141414\", \"#04CC98\"]"
+        ],
+        "store": "pieChartDataStore"
+    },
+    "designerId": "92e98999-b204-44c7-b30e-c68b82acd0da",
+    "isBuiltIn": true,
+    "iconCls": "icon-pie-chart",
+    "autoName": "MyPieChart",
+    "cn": [
+        {
+            "type": "Ext.chart.series.Pie",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "labelField": null,
+                "xField": "total"
+            },
+            "designerId": "9a542e0a-1ba0-42f2-b5e7-287559e35419"
+        },
+        {
+            "type": "Ext.chart.interactions.Rotate",
+            "reference": {
+                "name": "interactions",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "1188ce80-5493-4997-8bce-0c1772255a4d"
+        }
+    ]
+}

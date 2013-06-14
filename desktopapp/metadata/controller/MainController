@@ -1,0 +1,273 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "Customers",
+            "Orders",
+            "LineItems",
+            "PeriodTotals",
+            "CustomerCategories",
+            "Items"
+        ],
+        "designer|userClassName": "MainController"
+    },
+    "designerId": "e8527c92-ceb8-4982-a9ac-d42633aec5b6",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCustomerSelect",
+                "implHandler": [
+                    "var detailCard = this.getCustomerDetail();",
+                    "detailCard.setCustomer(customer);",
+                    "detailCard.ownerCt.getLayout().setActiveItem(detailCard);",
+                    "",
+                    "var args = {",
+                    "    params: {",
+                    "        customerId: customer.getId()",
+                    "    }",
+                    "};",
+                    "this.getOrdersStore().load(args);",
+                    "this.getPeriodTotalsStore().load(args);"
+                ],
+                "name": "customerselect",
+                "scope": "me",
+                "designer|targetType": "Customers",
+                "designer|controlQuery": "customers"
+            },
+            "designerId": "6415a5be-3a2e-47f5-acdc-f1d7f9563de2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "customers",
+                "selector": "main > #cards"
+            },
+            "designerId": "e1f65309-dd7e-4d3b-b168-10e5640b2e7a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "customerDetail",
+                "selector": "customerdetail"
+            },
+            "designerId": "2c52ac1f-a54b-48cc-ba19-5271150eb8f2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "orderDetail",
+                "selector": "orderdetail"
+            },
+            "designerId": "95653b7a-609e-40cf-a2e1-633ff402dd57"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onOrderSelect",
+                "implHandler": [
+                    "var orderCard = this.getOrderDetail();",
+                    "orderCard.setCustomer(customer);",
+                    "orderCard.setOrder(order);",
+                    "orderCard.ownerCt.getLayout().setActiveItem(orderCard);",
+                    "",
+                    "this.getLineItemsStore().load({",
+                    "    params: {",
+                    "\t\torderId: order.get('orderId')",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "orderselect",
+                "scope": "me",
+                "designer|targetType": "CustomerDetail",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "e8119546-3c69-402b-9455-5b8bd0ba49d5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCardSwitch",
+                "implHandler": [
+                    "this.getMain().updateBreadcrumbs();"
+                ],
+                "name": "activate",
+                "scope": "me",
+                "designer|targetType": "Ext.Component",
+                "designer|controlQuery": "main > #cardCt > component"
+            },
+            "designerId": "522805c4-94a5-4df1-91ff-17c3ec0b851a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "main"
+            },
+            "designerId": "f72d360f-ee56-4771-af3b-8ac010e141f4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBreadcrumbsBreadcrumbactivate",
+                "implHandler": [
+                    "this.getCardCt().getLayout().setActiveItem(index);"
+                ],
+                "name": "breadcrumbactivate",
+                "scope": "me",
+                "designer|targetType": "Breadcrumbs",
+                "designer|controlQuery": "breadcrumbs"
+            },
+            "designerId": "53c54d91-0293-467d-8f0f-6d221690bda0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "cardCt",
+                "selector": "#cardCt"
+            },
+            "designerId": "97d353a8-0444-493f-a857-e5d29fe0b7f1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNewOrder",
+                "implHandler": [
+                    "var orderCard = this.getOrderDetail();",
+                    "orderCard.setCustomer(customer);",
+                    "orderCard.setOrder(null);",
+                    "orderCard.ownerCt.getLayout().setActiveItem(orderCard);",
+                    "",
+                    "this.getLineItemsStore().removeAll();",
+                    "",
+                    "orderCard.startEditingNew();"
+                ],
+                "name": "neworder",
+                "scope": "me",
+                "designer|targetType": "CustomerDetail",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "8f13533a-72f7-4ee0-8f20-eb9e05dd0033"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onOrderCancel",
+                "implHandler": [
+                    "this.getCardCt().getLayout().setActiveItem(this.getCustomerDetail());"
+                ],
+                "name": "ordercancel",
+                "scope": "me",
+                "designer|targetType": "OrderDetail",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "b570d1df-f169-4f91-b3fa-e06ddfd6131c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onOrderSave",
+                "implHandler": [
+                    "var me = this,",
+                    "    i = 0,",
+                    "    len = lineItems.length,",
+                    "    customerId = customer.getId();",
+                    "for(; i < len; i++) {",
+                    "    lineItems[i] = Ext.copyTo({",
+                    "        customerId: customerId",
+                    "    }, lineItems[i].getData(), 'quantityOrdered,perUnitPrice,itemId');",
+                    "}",
+                    "",
+                    "order = Ext.copyTo({",
+                    "    customerId: customerId,",
+                    "    orderDate: new Date,",
+                    "    shippedDate: null,",
+                    "    details: lineItems",
+                    "}, order.getData(), 'shipping,tax,total');",
+                    "",
+                    "Fulfill.ss.DXCustomers.createOrder(order, function(provider, response) {",
+                    "    //console.log(response);",
+                    "    if (response.result) {",
+                    "        me.getMain().displayMessage('New order was successfully created.');",
+                    "        me.onCustomerSelect(customer);",
+                    "    } else {",
+                    "        Ext.Msg.alert('Error', 'There was an error creating the order:<br>' + response.message);",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "ordersave",
+                "scope": "me",
+                "designer|targetType": "OrderDetail",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "dbc4ae07-ce3d-4cb5-9d3b-36d4b423d32d"
+        }
+    ]
+}

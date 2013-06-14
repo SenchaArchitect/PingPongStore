@@ -1,0 +1,164 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "band"
+        ],
+        "data": [
+            "{",
+            "    name: 'Sencha, Inc',",
+            "    address: '1700 Seaport Blvd',",
+            "    city: 'Redwood City',",
+            "    phone: '650-555-1234',",
+            "    state: 'CA',",
+            "    zip: 94306,",
+            "    packedItems: [{",
+            "        name: 'Gizmo',",
+            "        itemId: 23424,",
+            "        quantityOrdered: 20",
+            "    }],",
+            "    unpackedItems: [{",
+            "        name: 'Widget',",
+            "        itemId: 24,",
+            "        quantityOrdered: 1",
+            "    }],",
+            "    shippedItems: [{",
+            "        name: 'Gizmo',",
+            "        itemId: 2454,",
+            "        quantityOrdered: 5",
+            "    }]",
+            "        ",
+            "}"
+        ],
+        "style": null,
+        "styleHtmlContent": true,
+        "designer|userClassName": "OrderConfirm",
+        "designer|userAlias": "orderconfirm",
+        "scrollable": "vertical"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "8c258653-f842-410f-b9d2-325a1f1c132c",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "end",
+                "docked": "bottom"
+            },
+            "designerId": "de5aed0b-d029-41a2-8e73-0bb62923384b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "mybutton3",
+                        "ui": "confirm",
+                        "text": "Confirm Shipment"
+                    },
+                    "designerId": "979ee522-4c61-4a72-9945-4539d7f26519",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton3Tap",
+                                "implHandler": [
+                                    "this.fireEvent('confirmtap');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "79a8914a-2f69-48f5-80b5-bb40cbf8409b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div class=\"customerCt\">",
+                    "    <h1>{name}</h1>",
+                    "    <div class=\"address\"><a href=\"http://maps.apple.com/?q={address},{city}, {state} {zip}\">{address}<br/>{city}, {state} {zip}</a></div>",
+                    "    <tpl if=\"phone\">",
+                    "\t    <div class=\"phone\">Phone <a href=\"tel:{phone}\">{phone}</a></div>",
+                    "    </tpl>",
+                    "    <tpl if=\"fax\">",
+                    "\t    <div class=\"fax\">Fax: {fax}</div>",
+                    "    </tpl>",
+                    "</div>",
+                    "",
+                    "<div class=\"packedItemsCt\">",
+                    "    <p>Please confirm these items have been packaged.</p>",
+                    "    <ul class=\"packedItems\">",
+                    "        <tpl for=\"packedItems\">",
+                    "            <li style=\"list-style-type: none;\"><span class=\"quantity-ordered-details packed\">{quantityOrdered}</span> <span class=\"item-name-details\">{name}</span> <span class=\"item-id-details\">{itemId}</span></li>",
+                    "        </tpl>",
+                    "    </ul>",
+                    "</div>",
+                    "",
+                    "<tpl if=\"unpackedItems.length\">",
+                    "    <div class=\"unpackedItemsCt\">",
+                    "        <p>Please confirm these items are not yet available for shipping.</p>",
+                    "        <ul class=\"unpackedItems\">",
+                    "            <tpl for=\"unpackedItems\">",
+                    "                <li style=\"list-style-type: none;\"><span class=\"quantity-ordered-details unpacked\">{quantityOrdered}</span> <span class=\"item-name-details\">{name}</span> <span class=\"item-id-details\">{itemId}</span></li>",
+                    "            </tpl>",
+                    "        </ul>",
+                    "    </div>",
+                    "</tpl>",
+                    "",
+                    "<tpl if=\"shippedItems.length\">",
+                    "    <div class=\"shippedItemsCt\">    ",
+                    "        <p>These items have already shipped.</p>",
+                    "        <ul class=\"shippedItems\">",
+                    "            <tpl for=\"shippedItems\">",
+                    "                <li style=\"list-style-type: none;\"><span class=\"quantity-ordered-details shipped\">{quantityOrdered}</span> <span class=\"item-name-details\">{name}</span> <span class=\"item-id-details\">{itemId}</span></li>",
+                    "            </tpl>",
+                    "        </ul>",
+                    "    </div>",
+                    "</tpl>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "9d72347b-a400-4129-ac63-646cf5b7fdbf"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "confirmtap"
+            },
+            "designerId": "9442fb8c-a808-4198-afb2-38020e84decc"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Architect-demo-server",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "node app"
+    },
+    "dependencies": {
+        "express": "3.2.x",
+        "nconf": "0.6.x",
+        "mysql": "2.0.x",
+        "extdirect": "0.9.x"
+    }
+}

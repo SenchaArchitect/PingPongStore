@@ -1,0 +1,45 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": null,
+        "designer|userClassName": "Dashboard",
+        "designer|userAlias": "dashboard",
+        "layout": "vbox"
+    },
+    "designerId": "b2f21f72-b244-4c9c-bab3-061d990c4ee5",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "pieChart",
+                "layout|flex": 1
+            },
+            "designerId": "394722ae-ee00-4025-953d-5629ba46d81a",
+            "masterInstanceId": "92e98999-b204-44c7-b30e-c68b82acd0da"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": null,
+                "layout|flex": 1
+            },
+            "designerId": "a3f862f6-1a45-400c-959a-cb1feec1f203",
+            "masterInstanceId": "f70a79c2-5f6a-4a8d-8ece-0404cf3bab11"
+        }
+    ]
+}

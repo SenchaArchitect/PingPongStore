@@ -1,0 +1,48 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainNavView",
+        "designer|userAlias": "main",
+        "designer|initialView": true
+    },
+    "designerId": "0aba0fc0-4808-40b1-a8d1-512255e88e89",
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Who are you?",
+                "id": null,
+                "itemId": "employeeChooser",
+                "store": "employeesStore"
+            },
+            "designerId": "cb2fa216-e6d9-4904-8013-d1dacde570da",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div>{name}</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "029035e5-0bc8-4a46-b015-b705baee3f3b"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,228 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "corner2"
+        ],
+        "ui": "",
+        "designer|userClassName": "OrderDetail",
+        "designer|userAlias": "orderdetail",
+        "layout": "vbox"
+    },
+    "designerId": "af575e65-2e11-43e5-821d-49fd6bcd0fdd",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "hdr"
+                ],
+                "data": [
+                    "{",
+                    "    orderId: 'B1242',",
+                    "    orderDate: '2/14/2013',",
+                    "    name: 'Sencha, Inc.',",
+                    "    category: 'Individual'",
+                    "}"
+                ],
+                "height": 120,
+                "itemId": "detail",
+                "styleHtmlContent": true
+            },
+            "mockCfgs": [
+                "data"
+            ],
+            "designerId": "a77a77d2-71c2-4c9b-9045-ad5e733d7643",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"order-detail-header\">",
+                            "    <div class=\"orderId\">{state}{orderId}</div>",
+                            "    <div class=\"orderDate\">{orderDate:date('m/d/Y')}</div>",
+                            "</div>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "7f4ece0b-f8f2-4a7d-b3b4-4f3bafa50b14"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "itemId": "orderDetailItemList",
+                "disableSelection": true,
+                "emptyText": "All line items have already been fulfilled.",
+                "store": "lineItemsStore",
+                "grouped": true
+            },
+            "designerId": "d2121016-df31-4a10-8a4b-d5c963e2c206",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"list-item\">",
+                            "",
+                            "    <img class=\"product-thumbnail\" src=\"imgs/{imgUrl}\" />",
+                            "    ",
+                            "    <div class=\"product-name\">#{itemId}: {name}</div>",
+                            "    ",
+                            "    <div class=\"product-info\">",
+                            "        <div class=\"quantity-ordered\">{quantityOrdered} ordered</div>",
+                            "        <tpl if=\"!packDate\">",
+                            "            <div class=\"quantity-in-stock\">{quantityInStock} in stock</div>",
+                            "        </tpl>",
+                            "        <tpl if=\"quantityOrdered &gt; quantityInStock\">",
+                            "            <div class=\"quantity-needed\">{[values.quantityOrdered - values.quantityInStock]} needed</div>",
+                            "        </tpl>",
+                            "    </div>",
+                            "",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "f4da5155-5ea7-4e44-b72d-891a9ed82ff6"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMylist1ItemTap",
+                        "implHandler": [
+                            "this.fireEvent('itemselect', record);"
+                        ],
+                        "name": "itemtap"
+                    },
+                    "designerId": "e2e405f6-5433-4703-a868-77e5c06155f1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "end",
+                "docked": "bottom"
+            },
+            "designerId": "eca3e81a-6804-43eb-8941-6d2ec6dce207",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "mybutton",
+                        "ui": "confirm",
+                        "text": "Ship Order"
+                    },
+                    "designerId": "28a81a72-e653-4ea0-8cf4-d0f9ce5e834a",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybuttonTap",
+                                "implHandler": [
+                                    "this.fireEvent('shipordertap');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "14b6e176-7d8f-484b-9892-d10b0fe92ec0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "itemselect",
+                "params": [
+                    "record"
+                ]
+            },
+            "designerId": "a32f169e-fcd7-465a-9186-c24afcc60ac5"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "shipordertap"
+            },
+            "designerId": "91acdd3b-7dd8-4593-aea9-b058f37c3107"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setData",
+                "designer|params": [
+                    "data"
+                ],
+                "implHandler": [
+                    "this.callParent(arguments);",
+                    "this.child('#detail').setData(data);"
+                ]
+            },
+            "designerId": "67dc23f1-264b-4c21-8c4e-5ebd75b8f0ea"
+        }
+    ]
+}

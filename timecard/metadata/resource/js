@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "resources/js/moment.js"
+    },
+    "designerId": "5c51e776-0336-4ec8-abbc-797f13b8eff5"
+}

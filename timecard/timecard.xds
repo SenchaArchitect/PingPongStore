@@ -1,0 +1,40 @@
+{
+    "name": "timecard",
+    "settings": {
+        "urlPrefix": "http://localhost:3000/timecard",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.3.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "0aba0fc0-4808-40b1-a8d1-512255e88e89",
+            "7d62b5d6-d19a-46c9-b694-db79416c99eb",
+            "b33ea84b-a124-428a-a70a-8ae3b1defb79",
+            "d77482ba-7d7c-47f3-b76e-e1d43dcee903"
+        ],
+        "store": [
+            "f7d24ff3-bd52-4fb7-a1be-c58ac1731429",
+            "d4b24b54-deef-4ffc-b7a4-3c99bf14c30e"
+        ],
+        "controller": [
+            "166ee3b9-4da4-41c4-b9f9-6aa4f451eba5"
+        ],
+        "model": [
+            "bc47973f-8e55-4e6a-849e-009fc66b621b",
+            "1efb106b-91cc-4d53-869c-36f230fbaee4"
+        ],
+        "resource": [
+            "91718d05-ebbf-4ad8-93f8-6ddcaa977c40",
+            "3417ef52-1c69-40b0-ab63-92b0f63695dc",
+            "9db6dd0f-e97f-4b2a-916d-57086da7f3f5",
+            "5c51e776-0336-4ec8-abbc-797f13b8eff5"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

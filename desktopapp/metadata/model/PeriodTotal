@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PeriodTotal"
+    },
+    "designerId": "b7ce09b0-2ac8-4622-a059-a9a0a3e304cd",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": null,
+                "name": "quarter",
+                "type": "string"
+            },
+            "designerId": "851a568b-56f5-44d6-875f-817e0e00c6c1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "total",
+                "type": "float"
+            },
+            "designerId": "9bbf84c6-7946-4eaf-9d63-1d7de92fa991"
+        }
+    ]
+}

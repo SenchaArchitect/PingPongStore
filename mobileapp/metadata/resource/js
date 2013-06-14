@@ -1,0 +1,13 @@
+{
+    "type": "jsoverrideresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "app/override/chart/Legend.js"
+    },
+    "designerId": "d764c603-7445-4465-a095-d082163ce0b3"
+}

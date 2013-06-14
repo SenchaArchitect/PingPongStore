@@ -1,0 +1,33 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Item",
+        "storeId": "Items",
+        "designer|userClassName": "Items",
+        "data": null
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "30da9405-2106-4c18-92cf-a4b3b0cd1a0c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXCustomers.getAllItems"
+            },
+            "designerId": "5ee411d1-d55c-40a3-9dc5-8294822e2c21"
+        }
+    ]
+}

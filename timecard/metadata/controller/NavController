@@ -1,0 +1,277 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NavController"
+    },
+    "designerId": "166ee3b9-4da4-41c4-b9f9-6aa4f451eba5",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onEmployeeChoose",
+                "implHandler": [
+                    "var name = record.get('name'),",
+                    "    nav = this.getNavView(),",
+                    "    tabPanel = this.getTabPanel({ title: name }),",
+                    "    punches = Ext.StoreManager.get('punchesStore');",
+                    "",
+                    "this.employee = record;",
+                    "",
+                    "punches.removeAll();",
+                    "punches.load({",
+                    "    params: {",
+                    "        employeeId: record.get('employeeId')",
+                    "    }",
+                    "});",
+                    "",
+                    "nav.push(tabPanel);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "main #employeeChooser"
+            },
+            "designerId": "748000a7-7bcb-4694-9878-9002748f55ad"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "navView",
+                "selector": "main"
+            },
+            "designerId": "1e754e7e-c204-4e7e-88fe-48be8c4b8201"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoCreate": true,
+                "ref": "tabPanel",
+                "selector": "tabpanel",
+                "xtype": "tabpanel"
+            },
+            "designerId": "efe4962a-d87d-431e-bbf9-8e56b7b5a882"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "punchInButton",
+                "selector": "punch #punchInButton",
+                "xtype": null
+            },
+            "designerId": "e415ad39-cc00-44c4-895b-caf20271db20"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "punchOutButton",
+                "selector": "punch #punchOutButton",
+                "xtype": null
+            },
+            "designerId": "f13cad97-4dab-444e-89b9-10dd71b24bb4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPunchInitialize",
+                "implHandler": [
+                    "this.getPunchOutButton().hide();"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Punch",
+                "designer|controlQuery": "punch"
+            },
+            "designerId": "359b2549-0fc0-41b9-bbec-1a12964948d7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPunchIn",
+                "implHandler": [
+                    "var punchTimeLabel = this.getPunchTime();",
+                    "",
+                    "this.timeIn = new Date();",
+                    "var formattedStart = this.formatTime(this.punchIn);",
+                    "",
+                    "this.getPunchInButton().hide();",
+                    "this.getPunchOutButton().show();",
+                    "punchTimeLabel.show();",
+                    "",
+                    "var me = this;",
+                    "var updatePunchTimeLabel = function() {",
+                    "    var now = new Date(),",
+                    "        result;",
+                    "    result = 'Punched in at ' + formattedStart + ' (' + me.timeAgo(me.punchIn) + ')';",
+                    "    punchTimeLabel.setHtml(result);",
+                    "};",
+                    "updatePunchTimeLabel();",
+                    "this.punchTimeInterval = setInterval(updatePunchTimeLabel, 1000);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "punch #punchInButton"
+            },
+            "designerId": "79cbe749-4ae5-4b05-90d0-acad6a66c576"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPunchOut",
+                "implHandler": [
+                    "var punch = Ext.create('Timecard.model.Punch'),",
+                    "    store = Ext.StoreManager.get('punchesStore');",
+                    "",
+                    "this.getPunchInButton().show();",
+                    "this.getPunchOutButton().hide();",
+                    "this.getPunchTime().hide();",
+                    "",
+                    "clearInterval(this.punchTimeInterval);",
+                    "",
+                    "punch.set({",
+                    "    employeeId: this.employee.get('employeeId'),",
+                    "    timeIn: this.timeIn,",
+                    "    timeOut: new Date()",
+                    "});",
+                    "",
+                    "store.add(punch);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "punch #punchOutButton"
+            },
+            "designerId": "eed1016c-beae-4658-bcc2-5750939678cb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "punchTime",
+                "selector": "punch #punchTime"
+            },
+            "designerId": "4a6ef49f-a469-4931-92ca-a17cb54a3476"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "punchListButton",
+                "selector": "tabpanel #punchListButton"
+            },
+            "designerId": "9512bd50-c367-4927-87da-cc630fe036b6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "formatTime",
+                "designer|params": [
+                    "d"
+                ],
+                "implHandler": [
+                    "return moment(d).format('h:mma [on] D MMMM YYYY');"
+                ]
+            },
+            "designerId": "fc27ab17-7146-49ac-8fcb-695c8b051e21"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "timeAgo",
+                "designer|params": [
+                    "d"
+                ],
+                "implHandler": [
+                    "return moment(d).fromNow();"
+                ]
+            },
+            "designerId": "66f5d1d2-c99b-45fd-acaf-d32ee3f4f614"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPunchSwipe",
+                "implHandler": [
+                    "var title = 'Delete',",
+                    "    message = 'Delete this punch?',",
+                    "    messageBox = new Ext.MessageBox();",
+                    "",
+                    "messageBox.confirm(title, message, function(response) {",
+                    "    if (response == 'yes') {",
+                    "        var store = Ext.StoreManager.get('punchesStore');",
+                    "        store.remove(record);",
+                    "    }",
+                    "});"
+                ],
+                "name": "itemswipe",
+                "designer|targetType": "PunchList",
+                "designer|controlQuery": "punchlist"
+            },
+            "designerId": "154e5a70-7451-49b1-bbd8-bfdd73ac67fd"
+        }
+    ]
+}
