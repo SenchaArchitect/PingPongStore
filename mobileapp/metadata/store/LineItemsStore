@@ -1,0 +1,107 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[{",
+            "    itemId: '1002',",
+            "    name: 'Nittaku 3-Star Balls (One Dozen)',",
+            "    quantityOrdered: 23,",
+            "    quantityInStock: 100,",
+            "    bin: 'A',",
+            "    lot: 32,",
+            "    packDate: undefined,",
+            "    imgUrl: 'balls/nittaku3.jpg'",
+            "},{",
+            "    itemId: '1009',",
+            "    name: 'Butterfly Home Rollaway',",
+            "    quantityOrdered: 15,",
+            "    quantityInStock: 390,",
+            "    bin: 'Z',",
+            "    lot: 12,",
+            "    packDate: undefined,",
+            "    imgUrl: 'tables/tbhom.jpg'",
+            "}]"
+        ],
+        "model": "LineItem",
+        "storeId": "lineItemsStore",
+        "designer|userClassName": "LineItemsStore"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "b91005d6-6ff0-466b-8e48-661a21051872",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXOrders.getItemsByOrder",
+                "paramOrder": [
+                    "orderId"
+                ],
+                "paramsAsHash": false
+            },
+            "designerId": "4ffeb8c8-b6a4-4c7a-8322-4c573d2b6979",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "aca38cce-e98e-432c-adb9-8c48061e6def"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "sortProperty": "packDate"
+            },
+            "designerId": "e715cd40-9653-4113-9556-da69828748ad",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "item"
+                        ],
+                        "implHandler": [
+                            "if (item.get('packDate')) {",
+                            "    if (item.get('shipDate')) {",
+                            "        return 'Shipped';",
+                            "    } else {",
+                            "        return 'Packed';",
+                            "    }",
+                            "} else {",
+                            "    return 'Unpacked';",
+                            "}"
+                        ]
+                    },
+                    "designerId": "e4538f6e-69ff-455b-b696-2893ba93a643"
+                }
+            ]
+        }
+    ]
+}

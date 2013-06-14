@@ -1,0 +1,397 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|padding": 10,
+        "height": null,
+        "width": null,
+        "designer|userClassName": "CustomerDetail",
+        "designer|userAlias": "customerdetail",
+        "layout": "vbox",
+        "title": "{name}"
+    },
+    "designerId": "45be5b30-b97b-4211-85f1-7c13008db6fc",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "container|align": "stretch",
+                "container|padding": 10,
+                "height": 173,
+                "padding": null,
+                "layout": "hbox",
+                "bodyPadding": null,
+                "title": null
+            },
+            "designerId": "8e5f0bfd-639b-4c1f-b85a-a2d2a3cb6185",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 1,
+                        "margin": "0 20 0 0",
+                        "padding": 10
+                    },
+                    "designerId": "435fac2c-8570-45c7-8c1e-3c4058145c42",
+                    "masterInstanceId": "aa4eae10-ff5e-4f4c-9ace-54249feb6754"
+                },
+                {
+                    "type": "Ext.chart.Chart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": null,
+                        "width": 400,
+                        "designer|displayName": "Chart",
+                        "animate": [
+                            "true"
+                        ],
+                        "insetPadding": 5,
+                        "store": "PeriodTotals"
+                    },
+                    "designerId": "c2f10ee6-6fe1-44f4-9274-6b5c86b0871f",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-line-chart",
+                    "autoName": "LineChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.axis.Numeric",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "total"
+                                ],
+                                "label": [
+                                    "{renderer: Ext.util.Format.currency}"
+                                ],
+                                "title": null
+                            },
+                            "designerId": "0cc2741f-36db-445a-aa70-12fb967bad00"
+                        },
+                        {
+                            "type": "Ext.chart.axis.Category",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "quarter"
+                                ],
+                                "label": [
+                                    "{",
+                                    "    field:'quarter',",
+                                    "    renderer: function(val) {",
+                                    "        // reformat: 2013-Q1 -> Q1 2013",
+                                    "        return val.split('-').reverse().join(' ');",
+                                    "    }",
+                                    "}"
+                                ],
+                                "designer|displayName": "Quarter",
+                                "title": null
+                            },
+                            "designerId": "956edbbd-7a0f-46f5-ad80-ba862112bfc5"
+                        },
+                        {
+                            "type": "Ext.chart.series.Line",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "shadowAttributes": [
+                                    "[]"
+                                ],
+                                "tips": [
+                                    "{",
+                                    "    trackMouse: true,",
+                                    "    renderer: function(storeItem, item) {",
+                                    "        this.update(",
+                                    "            storeItem.get('quarter').split('-').reverse().join(' ') + ': ' +",
+                                    "            Ext.util.Format.currency(storeItem.get('total'))",
+                                    "        );",
+                                    "    }",
+                                    "}"
+                                ],
+                                "axis": [
+                                    "left"
+                                ],
+                                "xField": "quarter",
+                                "yField": [
+                                    "total"
+                                ],
+                                "fill": true,
+                                "markerConfig": [
+                                    "{",
+                                    "    type: 'circle',",
+                                    "    radius: 5,",
+                                    "    fill: '#4db8ed',",
+                                    "    stroke: 'none'",
+                                    "}"
+                                ],
+                                "smooth": null,
+                                "style": [
+                                    "{",
+                                    "stroke: '#4db8ed',",
+                                    "'stroke-width': 3,",
+                                    "fill: '#a6dcf6'",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "6ba5805a-84a8-4a85-a6d1-406f6a605d00"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "layout|margins": "10 0",
+                "container|align": "stretch",
+                "designer|displayName": "button container",
+                "layout": "hbox"
+            },
+            "designerId": "c9c29c6b-5194-473f-96ac-6a8c6e5feb9c",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "icon-add",
+                        "scale": null,
+                        "text": "New Order"
+                    },
+                    "designerId": "2fe29ed5-3bd1-4702-a950-3a7176ed4353",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onNewOrderClick",
+                                "implHandler": [
+                                    "this.fireEvent('neworder', this.customer);"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "ade1e3fd-dc7c-4517-94ff-da902b2a6526"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "frame": null,
+                "itemId": "ordersGrid",
+                "title": null,
+                "disableSelection": true,
+                "sortableColumns": null,
+                "store": "Orders"
+            },
+            "configAlternates": {
+                "header": "object"
+            },
+            "designerId": "d0d74adb-6ba0-4f3d-9144-8494510a7064",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onOrdersGridItemClick",
+                        "implHandler": [
+                            "this.fireEvent('orderselect', this, this.customer, record);"
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
+                    },
+                    "designerId": "5aa41a2a-3db4-4015-8ac7-916975a1de6f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "orderNo",
+                        "text": "Orders",
+                        "flex": 1
+                    },
+                    "designerId": "e6d98d35-955f-4259-b7d8-a9947266c235"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "orderDate",
+                        "text": "Order Date"
+                    },
+                    "designerId": "360e93c9-827c-456b-947e-00e6964d767d"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "shippedDate",
+                        "text": "Ship Date"
+                    },
+                    "designerId": "795ac452-d0e0-45b4-be50-7602c076de5b"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "total",
+                        "text": "Total"
+                    },
+                    "designerId": "1fe43bde-62c0-46f2-8d94-ebbfcb4dac49",
+                    "masterInstanceId": "3b87262b-6812-4db7-89eb-adb0c4ce8627"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "balance",
+                        "text": "Balance"
+                    },
+                    "designerId": "936ed405-7e6d-471d-a2e8-f0aef821fe6b",
+                    "masterInstanceId": "3b87262b-6812-4db7-89eb-adb0c4ce8627"
+                },
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "stripeRows": false
+                    },
+                    "designerId": "f2881581-6158-4eb9-8cbb-3f175bf5a4c2"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setCustomer",
+                "designer|params": [
+                    "customer"
+                ],
+                "implHandler": [
+                    "this.setTitle(customer.get('name'));",
+                    "this.down('contactinfo').update(customer.getData());",
+                    "this.customer = customer;"
+                ]
+            },
+            "designerId": "3b760ad2-b7e7-4eb3-9063-bcf7a9a7a3f6"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "orderselect",
+                "params": [
+                    "customerdetail",
+                    "customer",
+                    "order"
+                ]
+            },
+            "designerId": "116bf320-eb8c-4e3f-afc7-0aa8641dfedf"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "neworder",
+                "params": [
+                    "customer"
+                ]
+            },
+            "designerId": "da6fe391-e6ef-4817-b767-51b76425ad67"
+        }
+    ]
+}

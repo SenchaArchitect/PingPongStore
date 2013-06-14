@@ -1,0 +1,144 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "idProperty": "customerId",
+        "designer|userClassName": "Customer"
+    },
+    "designerId": "b2f563ae-b95d-4e23-a44f-305f84c8d03b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "customerId"
+            },
+            "designerId": "5286aacb-26de-40b9-b127-6c1593ce371b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name",
+                "type": "string"
+            },
+            "designerId": "0f62c47b-511f-4894-8174-b5d89c8b4e32"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address",
+                "type": "string"
+            },
+            "designerId": "53548653-5060-4b46-8b4b-e5a3ac88a0c1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "city",
+                "type": "string"
+            },
+            "designerId": "35e27d92-4bd8-4a77-9674-0fd37f2584e3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "state",
+                "type": "string"
+            },
+            "designerId": "17a7a1ae-1915-48f9-829d-9f8ebc74e089"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "zip",
+                "type": "string"
+            },
+            "designerId": "4b9da332-9259-467c-878b-25d3578eb7ba"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone",
+                "type": "string"
+            },
+            "designerId": "6def9518-a1fd-4579-b9a5-bf1e7d267b13"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fax",
+                "type": "string"
+            },
+            "designerId": "9e9bcef1-b01f-4d3e-8291-af45d8b65fb3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "category",
+                "type": "string"
+            },
+            "designerId": "c32e5a8e-951f-43ef-89e4-a2504f41f5e2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "balance",
+                "type": "float"
+            },
+            "designerId": "71c72290-1911-4c1b-8a63-37fd855fdff6"
+        }
+    ]
+}

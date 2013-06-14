@@ -1,0 +1,124 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[{",
+            "    orderId: '45218',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Gregg Brownstone',",
+            "    state: 'NY',",
+            "    total: '$1078.12',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '45219',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Small Medium',",
+            "    state: 'NY',",
+            "    total: '$34.98',",
+            "    category: 'SMB'",
+            "},{",
+            "    orderId: '45220',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Mary Wittman',",
+            "    state: 'NY',",
+            "    total: '$214.12',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '45221',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Marcus Jones',",
+            "    state: 'NY',",
+            "    total: '$47.35',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '45222',",
+            "    orderDate: '2/212/2013',",
+            "    name: 'Susan Freidman',",
+            "    state: 'NY',",
+            "    total: '$336.40',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '45223',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Walter Yorke',",
+            "    state: 'NY',",
+            "    total: '$55.10',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '33450',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Sencha, Inc.',",
+            "    state: 'CA',",
+            "    total: '$82.47',",
+            "    category: 'Enterprise'",
+            "},{",
+            "    orderId: '33451',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Company',",
+            "    state: 'CA',",
+            "    total: '$72.13',",
+            "    category: 'Team'",
+            "},{",
+            "    orderId: '33452',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Paul Morgan',",
+            "    state: 'CA',",
+            "    total: '$20.26',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '33453',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Nacy Peel',",
+            "    state: 'CA',",
+            "    total: '$112.67',",
+            "    category: 'Individual'",
+            "},{",
+            "    orderId: '33454',",
+            "    orderDate: '2/12/2013',",
+            "    name: 'Hans Mildrake',",
+            "    state: 'CA',",
+            "    total: '$55.00',",
+            "    category: 'Individual'",
+            "}]"
+        ],
+        "model": "Orders",
+        "storeId": "ordersStore",
+        "designer|userClassName": "OrdersStore"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "a98b5c64-0fec-46a5-9ab2-affc6a5510be",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXOrders.getPendingOrders",
+                "paramsAsHash": null
+            },
+            "designerId": "c491f425-4fab-4c48-8c0c-08244efb65ec",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "a20c74f7-eb15-4f07-a5c0-927bded8ab2a"
+                }
+            ]
+        }
+    ]
+}

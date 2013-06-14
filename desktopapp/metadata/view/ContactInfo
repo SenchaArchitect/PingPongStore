@@ -1,0 +1,49 @@
+{
+    "type": "Ext.Component",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": "contactInfo",
+        "data": [
+            "{",
+            "    name: 'Sencha Inc.',",
+            "    address: '123 Main Street',",
+            "    city: 'Redwood City',",
+            "    state: 'CA',",
+            "    zip: '12345',",
+            "    phone: '(123) 234-3456',",
+            "    fax: '(123) 234-3456'",
+            "}"
+        ],
+        "margin": "0 0 10",
+        "designer|userClassName": "ContactInfo",
+        "designer|userAlias": "contactinfo"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "aa4eae10-ff5e-4f4c-9ace-54249feb6754",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div class=\"name\">{name}</div>",
+                    "<div class=\"address\">{address}<br>{city}, {state} {zip}</div>",
+                    "<div class=\"phone\">Phone: {phone}</div>",
+                    "<div class=\"phone\">Fax: {fax}</div>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "e7b7c74b-e1e0-4ecc-937d-612da72987e4"
+        }
+    ]
+}

@@ -1,0 +1,162 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|padding": "20 10 10",
+        "designer|userClassName": "Main",
+        "designer|userAlias": "main",
+        "designer|initialView": true,
+        "layout": "vbox"
+    },
+    "designerId": "9b7d8a97-4dad-4356-9377-6a8711054938",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "01a697d1-07b9-4871-a08e-79046ddffa97",
+            "masterInstanceId": "d12bc16d-2e68-4433-af85-d42f91f1f49c"
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "layout|margins": "10 0 0",
+                "cls": "globalMsg",
+                "hidden": true,
+                "html": null,
+                "itemId": "messages",
+                "designer|displayName": "messages"
+            },
+            "designerId": "b405307b-1c62-46b7-9df9-6a12c3e0d164"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "layout|margins": "10 0 0",
+                "frame": true,
+                "itemId": "cardCt",
+                "margin": "",
+                "designer|displayName": null,
+                "layout": "card"
+            },
+            "designerId": "1be7ab7f-0a56-408d-8c4a-c101b4a1a786",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "mainPanel",
+                        "frame": null,
+                        "header": null
+                    },
+                    "designerId": "c50617d2-959a-4f73-ae1b-2b58ce8c44ab",
+                    "masterInstanceId": "1e53f66b-c073-443e-bad5-3b3a4753ad9c"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "mainPanel",
+                        "frame": null,
+                        "designer|displayName": "Customer Detail",
+                        "header": null
+                    },
+                    "designerId": "0f56db72-205d-484c-97a9-e593160f898c",
+                    "masterInstanceId": "45be5b30-b97b-4211-85f1-7c13008db6fc"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "mainPanel",
+                        "designer|displayName": "Order Detail / New Order",
+                        "header": null
+                    },
+                    "designerId": "002f5d6e-4285-40dc-bcbe-bf1fb509cc23",
+                    "masterInstanceId": "0a9752c8-bc70-40f4-81d8-03830635dc63"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateBreadcrumbs",
+                "implHandler": [
+                    "var cmp = this.child('#cardCt').getLayout().getActiveItem(),",
+                    "    titles = [];",
+                    "while (cmp) {",
+                    "    titles.unshift(cmp.title);",
+                    "    cmp = cmp.previousSibling();",
+                    "}",
+                    "",
+                    "//one-off: first item is always \"Home\"",
+                    "titles[0] = \"Home\";",
+                    "",
+                    "this.child('breadcrumbs').update(titles);",
+                    ""
+                ]
+            },
+            "designerId": "06471db9-3b31-4b45-a6cb-501756f63548"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "displayMessage",
+                "designer|params": [
+                    "message",
+                    "howLong"
+                ],
+                "implHandler": [
+                    "howLong = howLong || 5000;",
+                    "var msg = this.child('#messages');",
+                    "msg.update(message);",
+                    "msg.show();",
+                    "Ext.Function.defer(msg.hide, howLong, msg);"
+                ]
+            },
+            "designerId": "4ecc2543-20b5-442e-be50-e16bfd0548a2"
+        }
+    ]
+}

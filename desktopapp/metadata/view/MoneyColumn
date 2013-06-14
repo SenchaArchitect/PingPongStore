@@ -1,0 +1,42 @@
+{
+    "type": "Ext.grid.column.Column",
+    "reference": {
+        "name": "columns",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MoneyColumn",
+        "designer|userAlias": "moneycolumn",
+        "align": "right",
+        "dataIndex": "0",
+        "text": null
+    },
+    "designerId": "3b87262b-6812-4db7-89eb-adb0c4ce8627",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "renderer",
+                "designer|params": [
+                    "value",
+                    "metaData",
+                    "record",
+                    "rowIndex",
+                    "colIndex",
+                    "store",
+                    "view"
+                ],
+                "implHandler": [
+                    "return Ext.util.Format.currency(value);"
+                ]
+            },
+            "designerId": "09ad1b3e-a723-4ebe-8b21-ce3ba4424141"
+        }
+    ]
+}

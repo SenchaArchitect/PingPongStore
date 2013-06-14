@@ -1,0 +1,548 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|padding": 10,
+        "height": null,
+        "width": null,
+        "designer|userClassName": "OrderDetail",
+        "designer|userAlias": "orderdetail",
+        "layout": "vbox",
+        "title": "{name}"
+    },
+    "designerId": "0a9752c8-bc70-40f4-81d8-03830635dc63",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "layout|margins": "0 0 10",
+                "designer|displayName": null
+            },
+            "designerId": "5789d8ad-51f7-4b11-909e-7bf23df45be1",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "addBtn",
+                        "iconCls": "icon-add",
+                        "scale": null,
+                        "text": "New Item"
+                    },
+                    "designerId": "faa3de1e-4b74-42be-bd1d-db129ecc5575",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onAddBtnClick",
+                                "implHandler": [
+                                    "this.startEditingNew();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "4561dff9-0428-4e7f-9f43-35c4f36c134d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "designer|displayName": "Order Items Grid",
+                "title": null,
+                "disableSelection": true,
+                "sortableColumns": false,
+                "store": "LineItems"
+            },
+            "designerId": "75f4fcde-fe01-4199-8162-46c672a3e1e8",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Template",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "itemId",
+                        "text": "Item",
+                        "flex": 1
+                    },
+                    "designerId": "6c3ac11e-ae41-424b-ba2b-0b45f6715b8f",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "name",
+                                "forceSelection": true,
+                                "store": "Items",
+                                "valueField": "itemId"
+                            },
+                            "designerId": "deb42970-17c2-4750-8253-b1f4765de045"
+                        },
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "{itemName}"
+                                ],
+                                "designer|displayName": "tpl"
+                            },
+                            "designerId": "6235fa96-c37a-4608-a343-f38b8a93d04d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "quantityOrdered",
+                        "text": "Quantity"
+                    },
+                    "designerId": "45b9e02b-42f3-4fee-ac48-e7c26490aff1",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowDecimals": false,
+                                "minValue": 1
+                            },
+                            "designerId": "5d711499-0d16-41e9-88d0-dc5a5725ef93"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "perUnitPrice",
+                        "text": "Unit Price"
+                    },
+                    "designerId": "723cfd5f-c37c-4de4-bccb-1a9db157642c",
+                    "masterInstanceId": "3b87262b-6812-4db7-89eb-adb0c4ce8627"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "totalPrice",
+                        "text": "Total Price"
+                    },
+                    "designerId": "fcf923cb-837e-40bc-a383-fcd0e3bcd9ef",
+                    "masterInstanceId": "3b87262b-6812-4db7-89eb-adb0c4ce8627"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridpanelEdit",
+                        "designer|params": [
+                            "editor",
+                            "context",
+                            "eOpts"
+                        ],
+                        "implHandler": [
+                            "var store = context.grid.getStore(),",
+                            "    record = context.record,",
+                            "    itemId = record.get('itemId'),",
+                            "    item = itemId && Ext.StoreManager.lookup('Items').findRecord('itemId', itemId);",
+                            "if (item) {",
+                            "    record.beginEdit();",
+                            "    record.set('itemName', item.get('name'));",
+                            "    record.set('perUnitPrice', item.get('perUnitPrice'));",
+                            "    record.set('totalPrice', item.get('perUnitPrice') * record.get('quantityOrdered'));",
+                            "    record.endEdit();",
+                            "} else {",
+                            "    store.remove(record);",
+                            "}",
+                            "this.updateTotals();"
+                        ],
+                        "name": "edit",
+                        "scope": "me"
+                    },
+                    "designerId": "9e883a88-a380-4788-acd3-7b53c20371f2"
+                },
+                {
+                    "type": "Ext.grid.plugin.CellEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.CellEditing",
+                    "userConfig": {
+                        "pluginId": "edit",
+                        "clicksToEdit": 1
+                    },
+                    "designerId": "d6cb2b87-b274-4154-9bcd-9da07c56a5b4",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCellEditingBeforeEdit",
+                                "implHandler": [
+                                    "// prevent editing when viewing an existing order",
+                                    "return !!this.isNewOrder;"
+                                ],
+                                "name": "beforeedit",
+                                "scope": "me"
+                            },
+                            "designerId": "01a455ef-34e4-418b-8d34-773996887b40"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "markDirty": false,
+                        "stripeRows": false
+                    },
+                    "designerId": "8da89b13-e025-462e-9cc8-ae4aecdc0d92"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "layout|margins": "0 0 20",
+                "cls": "orderTotals",
+                "data": [
+                    "{subTotal: 12345, shipping: 12, tax: 23, total: 12380}"
+                ],
+                "itemId": "totals",
+                "designer|displayName": null
+            },
+            "mockCfgs": [
+                "data"
+            ],
+            "designerId": "a9b6d4d5-5177-4048-92a5-b59e07fd583b",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<table>",
+                            "    <tr><th>Sub Total</th><td>{subTotal:currency}</td></tr>",
+                            "    <tr><th>Shipping</th><td>{shipping:currency}</td></tr>",
+                            "    <tr><th>Tax</th><td>{tax:currency}</td></tr>",
+                            "    <tr class=\"total\"><th>Grand Total</th><td>{total:currency}</td></tr>",
+                            "</table>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "b9a0603b-c789-4aa0-ae9f-ca788e3e3e38"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "layout|margins": null,
+                "container|align": "stretch",
+                "container|defaultMargins": [
+                    "0 0 0 10"
+                ],
+                "container|pack": "end",
+                "itemId": "buttonCt",
+                "designer|displayName": null,
+                "layout": "hbox"
+            },
+            "designerId": "98af5fcf-235c-4246-a9cb-6ab67622a5d6",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cancelBtn",
+                        "ui": null,
+                        "iconCls": "icon-cancel",
+                        "scale": null,
+                        "text": "Cancel"
+                    },
+                    "designerId": "92eae3ea-69b0-4566-ac0f-b54809a08fcc",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCancelBtnClick",
+                                "implHandler": [
+                                    "this.fireEvent('ordercancel');"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "3dd661b2-11bc-4ebd-b434-267728d36650"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": null,
+                        "itemId": "saveBtn",
+                        "iconCls": "icon-save",
+                        "scale": null,
+                        "text": "Save"
+                    },
+                    "designerId": "6378d582-2197-4ba8-a3af-1f8cc8fe52c0",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSaveBtnClick",
+                                "implHandler": [
+                                    "this.fireEvent('ordersave', this.customer, this.order, this.child('gridpanel').getStore().getRange());"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "544a14ac-8eee-4604-b49b-b8cbe5553f8f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setCustomer",
+                "designer|params": [
+                    "customer"
+                ],
+                "implHandler": [
+                    "var me = this;",
+                    "//me.child('contactinfo').update(customer.getData());",
+                    "me.customer = customer;"
+                ]
+            },
+            "designerId": "486649f9-e5f0-477f-92d7-6a88c17e6c8c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setOrder",
+                "designer|params": [
+                    "order"
+                ],
+                "implHandler": [
+                    "var addButton = this.down('#addBtn'),",
+                    "    buttons = this.child('#buttonCt'),",
+                    "    grid = this.child('gridpanel');",
+                    "",
+                    "this.isNewOrder = !order;",
+                    "if (order) {",
+                    "    this.setTitle('Order ' + order.get('orderNo'));",
+                    "    addButton.hide();",
+                    "    buttons.hide();",
+                    "} else {",
+                    "    order = Ext.create('Orders.model.Order', {subTotal:0, shipping:0, tax:0, total:0});",
+                    "    this.setTitle('New Order');",
+                    "    addButton.show();",
+                    "    buttons.show();",
+                    "}",
+                    "",
+                    "this.down('#totals').update(order.getData());",
+                    "this.order = order;",
+                    ""
+                ]
+            },
+            "designerId": "ddd7bf7c-6498-4ced-98f7-49afb15b383c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateTotals",
+                "implHandler": [
+                    "var grid = this.child('gridpanel'),",
+                    "    store = grid.getStore(),",
+                    "    taxRate = 0.05, //assumed flat tax",
+                    "    data = {",
+                    "        subTotal: 0,",
+                    "        tax: 0,",
+                    "        shipping: 10, //assumed flat shipping",
+                    "        total: 0",
+                    "    };",
+                    "",
+                    "store.each(function(lineItem) {",
+                    "    var itemPrice = lineItem.get('totalPrice') || 0,",
+                    "        itemTax = itemPrice * taxRate;",
+                    "    data.subTotal += itemPrice;",
+                    "    data.tax += itemTax;",
+                    "    data.total += itemPrice + itemTax + data.shipping;",
+                    "});",
+                    "",
+                    "this.order.set(data);",
+                    "this.down('#totals').update(data);"
+                ]
+            },
+            "designerId": "9ad218aa-edd3-42c0-892c-db005d919c54"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "startEditingNew",
+                "implHandler": [
+                    "var grid = this.child('gridpanel'),",
+                    "    store = grid.getStore(),",
+                    "    record = store.add({quantityOrdered: 1})[0];",
+                    "",
+                    "grid.getPlugin('edit').startEdit(record, 0);"
+                ]
+            },
+            "designerId": "eb34ad47-4103-456a-8375-0ccf92a3bdc0"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ordersave",
+                "params": [
+                    "customer",
+                    "order",
+                    "lineItems"
+                ]
+            },
+            "designerId": "b93bbdb9-7061-4206-9357-cd80687a5baf"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ordercancel"
+            },
+            "designerId": "74e6b243-a28e-42a2-8f8b-0225e10d43eb"
+        }
+    ]
+}

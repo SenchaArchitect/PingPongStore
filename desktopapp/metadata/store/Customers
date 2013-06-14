@@ -1,0 +1,29 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Customer",
+        "storeId": "Customers",
+        "designer|userClassName": "Customers"
+    },
+    "designerId": "6d36e801-38ee-4212-bcaa-a46f90380db4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXCustomers.getCustomers"
+            },
+            "designerId": "027e126f-63df-45cb-8cbb-f791bb5fe2eb"
+        }
+    ]
+}

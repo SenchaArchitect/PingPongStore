@@ -1,0 +1,56 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoSync": true,
+        "model": "Punch",
+        "storeId": "punchesStore",
+        "designer|userClassName": "PunchesStore"
+    },
+    "designerId": "d4b24b54-deef-4ffc-b7a4-3c99bf14c30e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    create: 'Fulfill.ss.DXPunches.createPunch',",
+                    "    read: 'Fulfill.ss.DXPunches.getPunches',",
+                    "    destroy: 'Fulfill.ss.DXPunches.destroyPunch'",
+                    "}"
+                ],
+                "directFn": null
+            },
+            "designerId": "b7e67af9-15f0-4978-bf86-400a35cb6c47",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "3e209419-6bf4-4b39-9b2f-783131c3e71f"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "e586b214-7bdb-46fc-8356-83f177cc1b8d"
+                }
+            ]
+        }
+    ]
+}

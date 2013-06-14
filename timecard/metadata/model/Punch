@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "clientIdProperty": null,
+        "idProperty": "punchId",
+        "designer|userClassName": "Punch"
+    },
+    "designerId": "1efb106b-91cc-4d53-869c-36f230fbaee4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "punchId",
+                "type": "int"
+            },
+            "designerId": "c03959b3-5518-4fc1-93e9-83483da757be"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "employeeId",
+                "type": "int"
+            },
+            "designerId": "3ea74e4b-5466-4c16-b37d-bf9b5861394a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeIn",
+                "type": "date"
+            },
+            "designerId": "cec4403c-da07-4916-9547-aa1b0e99c6de"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeOut",
+                "type": "date"
+            },
+            "designerId": "56716698-8386-4b3a-80f0-c587a05dfba3"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ItemDetail",
+        "designer|userAlias": "itemdetail",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "designerId": "e8b4bc13-35c6-479e-98b7-3565e0c7fb04",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2,
+                "id": "inventoryItemDescription",
+                "scrollable": "vertical"
+            },
+            "designerId": "c30cf869-e091-43a6-9fe0-87c40d98a4e2",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"list-item item-detail\">",
+                            "",
+                            "\t<img class=\"product-thumbnail\" src=\"imgs/{imgUrl}\" />",
+                            "",
+                            "\t<div class=\"product-name\">#{itemId}: {name}</div>",
+                            "\t<div class=\"product-description\">{description}</div>",
+                            "",
+                            "\t<div class=\"product-info\">",
+                            "\t\t<div class=\"per-unit-price\">${perUnitPrice}</div>",
+                            "\t\t<div class=\"quantity-in-stock\">{quantityInStock} in stock</div>",
+                            "\t\t<div class=\"product-location\">Bin {bin}, Lot {lot}</div>",
+                            "\t</div>",
+                            "",
+                            "</div>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "a199d8c3-9f3f-4b0d-bb4c-2296199b7d94"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 5,
+                "height": "100%",
+                "id": "orderListByItem",
+                "designer|displayName": "order list, by item",
+                "disableSelection": true,
+                "emptyText": "No orders to fulfill.",
+                "store": "ordersByItemStore",
+                "onItemDisclosure": null,
+                "striped": true
+            },
+            "designerId": "ab78fcbc-0cde-4297-a4b6-bfc6ae5d0231",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"order-list-element order-{category}\">",
+                            "    <div class=\"customer\">{name}</div>",
+                            "    <div class=\"orderId\">{state}{orderId}</div>",
+                            "    <div class=\"total\">{total:this.usMoney}</div>",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "59af2f2f-904c-44e4-9a93-baac156c019c",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "usMoney",
+                                "designer|params": [
+                                    "num"
+                                ],
+                                "implHandler": [
+                                    "return '$' + num.toFixed(2);"
+                                ]
+                            },
+                            "designerId": "2e226bc3-5f85-4723-b801-ac291759117f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

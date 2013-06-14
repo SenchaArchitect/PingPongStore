@@ -1,0 +1,11 @@
+.punchButton {
+    padding: 20px;
+    font-size: 200%;
+}
+
+.punchTime {
+	position: relative;
+	top: 1em;
+	text-align: center;
+	font-size: 200%;
+}

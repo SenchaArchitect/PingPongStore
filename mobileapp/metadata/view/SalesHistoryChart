@@ -1,0 +1,169 @@
+{
+    "type": "Ext.chart.CartesianChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "margin": null,
+        "designer|userClassName": "SalesHistoryChart",
+        "designer|userAlias": "saleshistorychart",
+        "colors": [
+            "[\"#444444\", \"#138CBF\", \"#141414\", \"#04CC98\"]"
+        ],
+        "store": "salesHistoryStore"
+    },
+    "designerId": "f70a79c2-5f6a-4a8d-8ece-0404cf3bab11",
+    "isBuiltIn": true,
+    "iconCls": "icon-bar-chart",
+    "autoName": "MyBarChart",
+    "cn": [
+        {
+            "type": "Ext.chart.axis.Category",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "totaledOrderDate"
+                ],
+                "label": [
+                    "{",
+                    "    renderer: function(value) {",
+                    "        return 'test';",
+                    "    }",
+                    "}"
+                ],
+                "labelInSpan": true,
+                "style": [
+                    "{",
+                    "    stroke: '#000',",
+                    "    fill: 'rgb(143,203,203)',",
+                    "    lineWidth: 2",
+                    "}"
+                ]
+            },
+            "designerId": "24c13088-7a5e-46a5-8b59-e85993bee378",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "renderer",
+                        "implHandler": [
+                            "var labelText = arguments[0];",
+                            "return Ext.Date.format(labelText, 'n/j/Y');"
+                        ]
+                    },
+                    "designerId": "ddac5773-f686-4de4-9eb2-9542807899d4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.chart.axis.Numeric",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "Enterprise",
+                    "Individual",
+                    "SMB",
+                    "Team"
+                ],
+                "grid": [
+                    "{",
+                    "    odd: {",
+                    "        fill: '#e8e8e8'",
+                    "    }",
+                    "}"
+                ],
+                "position": "left"
+            },
+            "designerId": "fb3328a8-b29c-47f5-9546-f8e017d2749e"
+        },
+        {
+            "type": "Ext.chart.series.Bar",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "colors": null,
+                "style": [
+                    "{",
+                    "    stroke: '#000',",
+                    "    fill: 'rgb(143,203,203)',",
+                    "    lineWidth: 2",
+                    "}"
+                ],
+                "xField": "totaledOrderDate",
+                "yField": [
+                    "Enterprise",
+                    "Individual",
+                    "SMB",
+                    "Team"
+                ]
+            },
+            "designerId": "e4270e58-44d7-4112-81b6-952b9c0a0a31"
+        },
+        {
+            "type": "Ext.chart.Legend",
+            "reference": {
+                "name": "legend",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null
+            },
+            "designerId": "018c107f-20e1-4866-af08-e8c535bc4ef3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onUpdateLegendStore",
+                "designer|params": [
+                    "store",
+                    "record"
+                ],
+                "implHandler": [
+                    "this.callParent(arguments);",
+                    "this.fireEvent('filterstatechange', record.get('index'), record.get('disabled'));"
+                ]
+            },
+            "designerId": "fedcea5d-674c-4f52-810f-016c7934861a"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "filterstatechange",
+                "params": [
+                    "filterIndex",
+                    "filterDisabled"
+                ]
+            },
+            "designerId": "0b6de31a-f176-427e-8692-942561eb2486"
+        }
+    ]
+}

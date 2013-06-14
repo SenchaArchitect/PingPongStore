@@ -1,0 +1,49 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OrdersNavView",
+        "designer|userAlias": "ordersnavview"
+    },
+    "designerId": "37dd50b8-f912-46ed-bfec-3f7d4b1f0c5d",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "backButton": null,
+                "docked": "top"
+            },
+            "designerId": "5e20bebd-d1b9-43e3-b0e1-71548246d933",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "backButton",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "baseCls": null,
+                "title": "Orders"
+            },
+            "designerId": "34101af3-573a-4c39-b0dc-93cb62c87a05",
+            "masterInstanceId": "d4d44468-4781-4b60-a297-65c74e3fb5dd"
+        }
+    ]
+}

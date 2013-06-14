@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0.0.0" id="sampleapp">
+ 
+  <author href="http://www.sencha.com/"
+          rim:copyright="Copyright 2007-2013 Sencha">Sencha, Inc</author>
+ 
+  <name>Order Fulfillment</name>
+ 
+  <description>
+    Pingpong store order fulfillment
+  </description>
+
+  <rim:permissions>
+  </rim:permissions>
+ 
+  <icon src="icon.png"/>
+ 
+  <content src="app.html"/>
+ 
+  <feature id="blackberry.ui.dialog"/>
+   
+  <feature id="blackberry.app.orientation">
+    <param name="mode" value="portrait" />
+  </feature>
+ 
+  <feature id="blackberry.app">
+    <param name="backgroundColor" value="0xFFFFFFFF" />
+  </feature>
+ 
+  <access uri="http://172.16.10.237:3000" subdomains="true">
+    <feature id="blackberry.app" required="true" version="1.0.0"/>
+    <feature id="blackberry.invoke" required="true" version="1.0.0"/>
+  </access>
+ 
+  <license href="http://www.example.com/"/> 
+</widget>

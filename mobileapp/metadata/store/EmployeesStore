@@ -1,0 +1,82 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "data": [
+            "[",
+            "    {",
+            "        \"employeeId\": 1,",
+            "        \"name\": \"Ron Burgundy\",",
+            "        \"title\": \"CEO\"",
+            "    },",
+            "    {",
+            "        \"employeeId\": 2,",
+            "        \"name\": \"Brian Fantana\",",
+            "        \"title\": \"Inventory manager\"",
+            "    },",
+            "    {",
+            "        \"employeeId\": 3,",
+            "        \"name\": \"Champ Kind\",",
+            "        \"title\": \"Associate\"",
+            "    },",
+            "    {",
+            "        \"employeeId\": 4,",
+            "        \"name\": \"Brick Tamland\",",
+            "        \"title\": \"Associate\"",
+            "    }  ",
+            "]"
+        ],
+        "model": "Employee",
+        "storeId": "employeesStore",
+        "designer|userClassName": "EmployeesStore"
+    },
+    "designerId": "1b194a28-f3ee-45d9-9687-0ef4e6816449",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    create: 'Fulfill.ss.DXEmployees.createEmployee',",
+                    "    read: 'Fulfill.ss.DXEmployees.getEmployees',",
+                    "    update: 'Fulfill.ss.DXEmployees.updateEmployee',",
+                    "    destroy: 'Fulfill.ss.DXEmployees.destroyEmployee'",
+                    "}"
+                ],
+                "directFn": null
+            },
+            "designerId": "fd61bf57-6b59-4d0e-850c-3742dedabebf",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "66097c86-0e64-4a06-a036-4d4071661719"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "d3697a41-961f-48f2-8a1a-4a977d8e8eae"
+                }
+            ]
+        }
+    ]
+}

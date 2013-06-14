@@ -1,0 +1,57 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "Order",
+        "storeId": "Orders",
+        "designer|userClassName": "Orders",
+        "data": [
+            "[",
+            "    {orderNo: \"ADR1123123\", id: 200, orderDate: \"2013-01-12T00:00:00.000Z\", shippedDate: \"2013-01-12T00:00:00.000Z\", total: 975.25, balance: 123, subTotal: 79900, shipping: 25.25, tax: 50, customer: null},",
+            "    {orderNo: \"XDR1876889\", id: 204, orderDate: \"2012-11-10T00:00:00.000Z\", shippedDate: \"2012-11-10T00:00:00.000Z\", total: 234.56, balance: 123, subTotal: 0, shipping: 0, tax: 0, customer: null},",
+            "    {orderNo: \"EDR0008719\", id: 202, orderDate: \"2012-07-22T00:00:00.000Z\", shippedDate: \"2012-07-22T00:00:00.000Z\", total: 1234.56, balance: 234, subTotal: 0, shipping: 15, tax: 0, customer: null},",
+            "    {orderNo: \"SSP8000318\", id: 203, orderDate: \"2012-03-01T00:00:00.000Z\", shippedDate: \"2012-03-01T00:00:00.000Z\", total: 345.67, balance: 234, subTotal: 0, shipping: 0, tax: 22, customer: null},",
+            "    {orderNo: \"ATR1008342\", id: 201, orderDate: \"2012-01-12T00:00:00.000Z\", shippedDate: \"2012-01-12T00:00:00.000Z\", total: 456.78, balance: 345, subTotal: 0, shipping: 20, tax: 50, customer: null}",
+            "]"
+        ]
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "588df6d4-867e-4489-8b69-86223ef23d6a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "Fulfill.ss.DXCustomers.getOrders",
+                "paramOrder": [
+                    "customerId"
+                ]
+            },
+            "designerId": "511595b9-317c-45d9-acfe-54711979f0ef"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "orderDate"
+            },
+            "designerId": "26e2e5eb-8acb-45cc-8505-51d97d423932"
+        }
+    ]
+}

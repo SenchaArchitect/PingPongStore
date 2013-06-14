@@ -1,0 +1,51 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PunchList",
+        "designer|userAlias": "punchlist",
+        "store": "punchesStore"
+    },
+    "designerId": "b33ea84b-a124-428a-a70a-8ae3b1defb79",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div>{timeIn:this.formatTime} to {timeOut}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "1eb533ff-eb6b-4146-a450-c935af6afd1d",
+            "cn": [
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "formatTime",
+                        "designer|params": [
+                            "d"
+                        ],
+                        "implHandler": [
+                            "return moment(d).format('h:mma [on] D MMMM YYYY');"
+                        ]
+                    },
+                    "designerId": "a14b94fd-2167-482f-988f-9236b815f1cb"
+                }
+            ]
+        }
+    ]
+}

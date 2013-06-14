@@ -1,0 +1,222 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OrderList",
+        "designer|userAlias": "orderlist",
+        "disableSelection": true,
+        "emptyText": "No orders to fulfill.",
+        "store": "ordersStore",
+        "onItemDisclosure": null
+    },
+    "designerId": "d4d44468-4781-4b60-a297-65c74e3fb5dd",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div class=\"order-list-element order-{category}\">",
+                    "    <div class=\"customer\">{name}</div>",
+                    "    <div class=\"orderId\">{state}{orderId}</div>",
+                    "    <div class=\"total\">{total:this.usMoney}</div>",
+                    "</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "ddcc2bba-5fd0-400d-b7c6-19396c683826",
+            "cn": [
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "usMoney",
+                        "designer|params": [
+                            "num"
+                        ],
+                        "implHandler": [
+                            "return '$' + num.toFixed(2);"
+                        ]
+                    },
+                    "designerId": "d90bce2f-ae20-4fc6-bd43-59b90721bba0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "45e40b4f-8d31-4c5a-a86d-b7a75a45ffc1"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "segbuttontap",
+                "params": [
+                    "category",
+                    "pressed"
+                ]
+            },
+            "designerId": "f417714d-5655-46dc-8c1a-37f1ac55c743"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "designerId": "4ec75dc9-89ca-4050-b91b-da2a2bc07513",
+            "cn": [
+                {
+                    "type": "Ext.SegmentedButton",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "docked": null,
+                        "hidden": null,
+                        "id": "segButton",
+                        "itemId": "mysegmentedbutton",
+                        "allowMultiple": true
+                    },
+                    "designerId": "08bba945-de46-420d-9f14-7146a66312e7",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "pressed": true,
+                                "text": "Enterprise"
+                            },
+                            "designerId": "c30d2393-84f3-4dc3-939f-dff5c476c444"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "pressed": true,
+                                "disabled": null,
+                                "text": "Individual"
+                            },
+                            "designerId": "8470d2e6-95c3-42b7-bdf7-6a591fa46cc9"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "pressed": true,
+                                "text": "SMB"
+                            },
+                            "designerId": "6ec3ee67-963d-4e90-af8f-6d5a9459b415"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "pressed": true,
+                                "text": "Team"
+                            },
+                            "designerId": "a8ad17e8-9079-4466-89bc-b709de2c9c3b"
+                        },
+                        {
+                            "type": "delegateeventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonTap",
+                                "implHandler": [
+                                    "var segButton = Ext.getCmp('segButton'),",
+                                    "    pressedButtons = segButton.getPressedButtons(),",
+                                    "    isPressed = segButton.isPressed(button);",
+                                    "",
+                                    "if (!isPressed && pressedButtons.length < 1) {",
+                                    "    return false;",
+                                    "}",
+                                    "this.fireEvent('segbuttontap', button.getText(), isPressed);"
+                                ],
+                                "name": "tap",
+                                "designer|targetType": "Ext.Button",
+                                "delegate": "button"
+                            },
+                            "designerId": "8d999a2f-be50-41cd-8ed8-10a5b1504867"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSegButtonToggle",
+                                "implHandler": [
+                                    "var pressedButtons = segmentedbutton.getPressedButtons();",
+                                    "if (pressedButtons.length === 1) {",
+                                    "    pressedButtons[0].disable();",
+                                    "} else {",
+                                    "    var buttons = segmentedbutton.getItems();",
+                                    "    buttons.each(function(button) {",
+                                    "        button.enable();",
+                                    "    });",
+                                    "}"
+                                ],
+                                "name": "toggle"
+                            },
+                            "designerId": "832eb942-b4e9-40d1-9ee9-b71aad82ad97"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

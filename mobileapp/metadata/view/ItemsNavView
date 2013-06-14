@@ -1,0 +1,49 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ItemsNavView",
+        "designer|userAlias": "itemsnavview"
+    },
+    "designerId": "ed6767f7-d20f-4472-938d-d650419277dd",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "backButton": null,
+                "docked": "top"
+            },
+            "designerId": "ea4b9649-dd80-4086-8878-0e4a92cbb843",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "backButton",
+                    "type": "object"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Items",
+                "title": "Inventory"
+            },
+            "designerId": "b4f3ed90-c91f-4579-b9f9-d505936b093b",
+            "masterInstanceId": "c6723c85-9564-4797-b897-cf39e2c62790"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "PeriodTotal",
+        "storeId": "PeriodTotals",
+        "designer|userClassName": "PeriodTotals",
+        "data": [
+            "[",
+            "    {quarter:\"2012-Q1\", total:138}, ",
+            "    {quarter:\"2012-Q2\", total:9280}, ",
+            "    {quarter:\"2012-Q3\", total:12902}, ",
+            "    {quarter:\"2012-Q4\", total:12448}, ",
+            "    {quarter:\"2013-Q1\", total:18790}",
+            "]"
+        ]
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "37c37ef2-463e-4a49-a4c8-da1e1d9c3ddc",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": null,
+                "directFn": "Fulfill.ss.DXCustomers.getCustomerDetail",
+                "paramOrder": [
+                    "customerId"
+                ]
+            },
+            "designerId": "5f3bc7d9-d7c4-4e34-88ac-93f9e1525b4d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "perPeriodTotals"
+                    },
+                    "designerId": "7ed2c4e2-e62a-4462-a839-8199c4281821"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EmployeesNavView",
+        "designer|userAlias": "employeesnavview"
+    },
+    "designerId": "dce7241e-21fe-458c-822b-acda42eb2d3e",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "designerId": "98890959-fe3a-4fed-abcf-23ac4f4be8f5",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "itemId": "newEmployeeButton",
+                        "iconCls": "add",
+                        "text": null
+                    },
+                    "designerId": "3c4e0c66-89b2-4862-aa54-73515c2cd4b9"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Employees",
+                "designer|displayName": "Employee list"
+            },
+            "designerId": "a3908faa-cea3-416e-aa31-b2fcb4ea2d85",
+            "masterInstanceId": "5dff8fb4-2ffa-454e-8ade-f9559a552aad"
+        }
+    ]
+}

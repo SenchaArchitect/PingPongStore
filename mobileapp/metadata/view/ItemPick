@@ -1,0 +1,194 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "record": false,
+        "cls": [
+            "corner"
+        ],
+        "data": [
+            "{}"
+        ],
+        "designer|userClassName": "ItemPick",
+        "designer|userAlias": "itempick",
+        "layout": "vbox"
+    },
+    "mockCfgs": [
+        "data"
+    ],
+    "designerId": "d1cb39d6-3517-454b-a9b2-b788fd58f7f5",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "record",
+            "type": "boolean"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "cls": [
+                    "branding"
+                ],
+                "itemId": "detail",
+                "padding": null
+            },
+            "designerId": "8ef6a300-b14d-4988-b0a0-c2c1a4ab0e42",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"item-detail\">",
+                            "    ",
+                            "    <img class=\"product-thumbnail\" src=\"imgs/{imgUrl}\" />",
+                            "",
+                            "</div>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "64711ea0-9392-43f5-8744-2b49d55f4172"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": null,
+                        "title": "Location"
+                    },
+                    "designerId": "0e6dc63d-a3dd-4a1d-b63b-e216a35af6f7",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "label": "Bin",
+                                "name": "bin"
+                            },
+                            "designerId": "35371c7b-59ab-4935-90fa-f5ff596eae87"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "label": "Lot",
+                                "name": "lot"
+                            },
+                            "designerId": "2e0915af-ac7e-4e3a-9a59-a92ee0c0002d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "pickBtn",
+                        "margin": 10,
+                        "ui": "action",
+                        "scope": null,
+                        "text": "Pack {quantity} Item(s)"
+                    },
+                    "designerId": "a31ad055-7aa4-4bb7-b672-f5a36e482b76",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton2Tap",
+                                "implHandler": [
+                                    "this.fireEvent('itempick');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "f2e57da9-422f-4fe1-91db-4e2cce3b92fe"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "itempick"
+            },
+            "designerId": "ee512b4d-2c56-4512-b1ac-352ff0ff37a6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setRecord",
+                "designer|params": [
+                    "newRecord"
+                ],
+                "implHandler": [
+                    "this.callParent(arguments);",
+                    "if (newRecord) {",
+                    "    var pickBtn = this.down('#pickBtn'),",
+                    "        notEnough = newRecord.get('quantityOrdered') > newRecord.get('quantityInStock');",
+                    "",
+                    "    if (notEnough) {",
+                    "        pickBtn.hide();",
+                    "    } else if (newRecord.get('shipDate')) {",
+                    "        pickBtn.hide();",
+                    "    } else {",
+                    "        var txt = (newRecord.get('packDate') ? 'Unpack ' : 'Pack ') + newRecord.get('quantityOrdered') + ' Item(s)';",
+                    "        pickBtn.setText(txt);",
+                    "        pickBtn.show();",
+                    "    }",
+                    "    this.child('#detail').setData(newRecord.data);",
+                    "}",
+                    "return this;"
+                ]
+            },
+            "designerId": "ff0256cc-d450-4a29-a3ec-aaa3482fc944"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "name": "desktopapp",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "http://localhost:3000/desktop/",
+        "exportPath": "",
+        "buildShouldOverwriteIndex": true,
+        "undefined": "MyApp.",
+        "cloudFoundryTargetUrl": "",
+        "cloudFoundryUserName": "",
+        "cloudFoundryPassword": ""
+    },
+    "xdsVersion": "2.3.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "9b7d8a97-4dad-4356-9377-6a8711054938",
+            "1e53f66b-c073-443e-bad5-3b3a4753ad9c",
+            "45be5b30-b97b-4211-85f1-7c13008db6fc",
+            "0a9752c8-bc70-40f4-81d8-03830635dc63",
+            "3b87262b-6812-4db7-89eb-adb0c4ce8627",
+            "aa4eae10-ff5e-4f4c-9ace-54249feb6754",
+            "d12bc16d-2e68-4433-af85-d42f91f1f49c"
+        ],
+        "store": [
+            "6d36e801-38ee-4212-bcaa-a46f90380db4",
+            "588df6d4-867e-4489-8b69-86223ef23d6a",
+            "375c4347-e3d7-4867-9fee-966c0c19ed9a",
+            "30da9405-2106-4c18-92cf-a4b3b0cd1a0c",
+            "ccd090cc-4ddb-4468-90e3-1aa75e4bbef9",
+            "37c37ef2-463e-4a49-a4c8-da1e1d9c3ddc"
+        ],
+        "controller": [
+            "e8527c92-ceb8-4982-a9ac-d42633aec5b6"
+        ],
+        "model": [
+            "b2f563ae-b95d-4e23-a44f-305f84c8d03b",
+            "7715829a-95ff-43cf-b3ea-6d2ef294fb7c",
+            "01039786-0d8e-4953-bbd4-dc087de95933",
+            "b3f961e5-6ae7-4696-9b82-d74a52a37981",
+            "45f7ff1d-da6a-40f1-95f7-c5b1df7c098c",
+            "b7ce09b0-2ac8-4622-a059-a9a0a3e304cd"
+        ],
+        "resource": [
+            "049bdd16-daaf-4079-beec-2e9dc132e5e2",
+            "e105a897-0f1a-4233-b977-5fc0433772b4",
+            "e39bbf26-c67e-4eee-aa6c-7b3b4fa04ffd"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "name": "mobileapp",
+    "settings": {
+        "urlPrefix": "http://localhost:3000/mobile/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.3.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "035cf53e-a78c-45dd-ab1e-746a36470acb",
+            "b2f21f72-b244-4c9c-bab3-061d990c4ee5",
+            "f70a79c2-5f6a-4a8d-8ece-0404cf3bab11",
+            "92e98999-b204-44c7-b30e-c68b82acd0da",
+            "37dd50b8-f912-46ed-bfec-3f7d4b1f0c5d",
+            "d4d44468-4781-4b60-a297-65c74e3fb5dd",
+            "af575e65-2e11-43e5-821d-49fd6bcd0fdd",
+            "d1cb39d6-3517-454b-a9b2-b788fd58f7f5",
+            "8c258653-f842-410f-b9d2-325a1f1c132c",
+            "ed6767f7-d20f-4472-938d-d650419277dd",
+            "c6723c85-9564-4797-b897-cf39e2c62790",
+            "e8b4bc13-35c6-479e-98b7-3565e0c7fb04",
+            "dce7241e-21fe-458c-822b-acda42eb2d3e",
+            "5dff8fb4-2ffa-454e-8ade-f9559a552aad",
+            "c4bcb204-ec25-49bb-87ba-7f62fdf42a82"
+        ],
+        "store": [
+            "b91005d6-6ff0-466b-8e48-661a21051872",
+            "e102c084-4522-4fb5-99b1-a83474e0143c",
+            "a98b5c64-0fec-46a5-9ab2-affc6a5510be",
+            "2011444f-0b89-4857-9dff-c93b7e306911",
+            "ee986cef-4f0f-4c7b-8d03-4a344849168f",
+            "6ad1e93f-d9cc-4d00-9fcd-4f0c82fdd62a",
+            "1b194a28-f3ee-45d9-9687-0ef4e6816449"
+        ],
+        "controller": [
+            "780dcc38-3afa-426f-919d-cecdf2c0ba20"
+        ],
+        "model": [
+            "b48a158a-7758-464a-ba46-ff91523b960c",
+            "2bd3f316-4a6a-4a23-b751-e30ec54c2f69",
+            "9593123b-ab15-4ad0-8927-0e44bc29f3d4",
+            "fb73e33a-639c-4458-9394-054bf5f9297b"
+        ],
+        "resource": [
+            "8ae84dde-fac1-4003-98bd-ce1ec6195ddb",
+            "e70d6d20-a042-4f16-aaf7-5f1e7e5178ac",
+            "41b1bd5b-cda0-4760-8a68-fc74eba1d8fe",
+            "d764c603-7445-4465-a095-d082163ce0b3"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
