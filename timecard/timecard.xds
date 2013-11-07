@@ -1,14 +1,39 @@
 {
     "name": "timecard",
     "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.1.45",
+            "frameworkVersion": "2.3.0.328"
+        },
         "urlPrefix": "http://localhost:3000/timecard",
-        "exportPath": ""
+        "exportPath": "",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
     },
-    "xdsVersion": "2.3.0",
-    "xdsBuild": 0,
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 1328,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000503,
-    "framework": "touch22",
+    "upgradeVersion": 300000000002,
+    "framework": "touch23",
     "viewOrderMap": {
         "view": [
             "0aba0fc0-4808-40b1-a8d1-512255e88e89",

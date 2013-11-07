@@ -6,10 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "NavController"
+        ],
         "models": [
             "Punch",
             "Employee"
         ],
+        "name": "Timecard",
         "stores": [
             "EmployeesStore",
             "PunchesStore"
@@ -19,11 +23,7 @@
             "TabPanel",
             "PunchList",
             "Punch"
-        ],
-        "controllers": [
-            "NavController"
-        ],
-        "name": "Timecard"
+        ]
     },
     "designerId": "application"
 }

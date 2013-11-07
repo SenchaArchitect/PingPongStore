@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PunchList",
         "designer|userAlias": "punchlist",
+        "designer|userClassName": "PunchList",
         "store": "punchesStore"
     },
     "designerId": "b33ea84b-a124-428a-a70a-8ae3b1defb79",
@@ -20,10 +20,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "itemTpl",
                 "implHandler": [
                     "<div>{timeIn:this.formatTime} to {timeOut}</div>"
-                ],
-                "designer|displayName": "itemTpl"
+                ]
             },
             "designerId": "1eb533ff-eb6b-4146-a450-c935af6afd1d",
             "cn": [
@@ -35,10 +35,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "formatTime",
                         "designer|params": [
                             "d"
                         ],
+                        "fn": "formatTime",
                         "implHandler": [
                             "return moment(d).format('h:mma [on] D MMMM YYYY');"
                         ]

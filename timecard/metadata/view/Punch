@@ -6,10 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "id": null,
-        "ui": null,
+        "designer|userAlias": "punch",
         "designer|userClassName": "Punch",
-        "designer|userAlias": "punch"
+        "id": null,
+        "ui": null
     },
     "designerId": "d77482ba-7d7c-47f3-b76e-e1d43dcee903",
     "cn": [
@@ -25,11 +25,11 @@
                 "cls": [
                     "punchButton"
                 ],
+                "iconCls": "arrow_right",
                 "id": null,
                 "itemId": "punchInButton",
-                "ui": "action",
-                "iconCls": "arrow_right",
-                "text": "Punch in"
+                "text": "Punch in",
+                "ui": "action"
             },
             "designerId": "29350698-fe0a-4bb1-ac4c-1ca8d1928294"
         },
@@ -46,11 +46,11 @@
                     "punchButton"
                 ],
                 "disabled": false,
+                "iconCls": "arrow_left",
                 "id": null,
                 "itemId": "punchOutButton",
-                "ui": "action",
-                "iconCls": "arrow_left",
-                "text": "Punch out"
+                "text": "Punch out",
+                "ui": "action"
             },
             "designerId": "cc7d1f78-293b-4e99-9d01-695141374c0d"
         },

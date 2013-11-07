@@ -7,9 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "autoSync": true,
+        "designer|userClassName": "PunchesStore",
         "model": "Punch",
-        "storeId": "punchesStore",
-        "designer|userClassName": "PunchesStore"
+        "storeId": "punchesStore"
     },
     "designerId": "d4b24b54-deef-4ffc-b7a4-3c99bf14c30e",
     "cn": [

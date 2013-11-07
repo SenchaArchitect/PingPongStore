@@ -31,9 +31,9 @@
             "    }",
             "]"
         ],
+        "designer|userClassName": "EmployeesStore",
         "model": "Employee",
-        "storeId": "employeesStore",
-        "designer|userClassName": "EmployeesStore"
+        "storeId": "employeesStore"
     },
     "mockCfgs": [
         "data"

@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "direct",
+        "designer|userClassName": "DirectAPI",
         "url": "/directapi"
     },
     "designerId": "3417ef52-1c69-40b0-ab63-92b0f63695dc"

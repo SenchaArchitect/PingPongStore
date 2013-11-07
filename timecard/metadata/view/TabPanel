@@ -7,8 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "activeItem": null,
-        "designer|userClassName": "TabPanel",
-        "designer|userAlias": "tabpanel"
+        "designer|userAlias": "tabpanel",
+        "designer|userClassName": "TabPanel"
     },
     "designerId": "7d62b5d6-d19a-46c9-b694-db79416c99eb",
     "cn": [
@@ -33,8 +33,8 @@
             "codeClass": null,
             "userConfig": {
                 "designer|displayName": "Punch",
-                "title": "Punch",
-                "iconCls": "add"
+                "iconCls": "add",
+                "title": "Punch"
             },
             "designerId": "ac7ef2a1-528d-4fb5-bef7-e8c0a1108374",
             "masterInstanceId": "d77482ba-7d7c-47f3-b76e-e1d43dcee903"
@@ -47,10 +47,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "punchListButton",
                 "designer|displayName": "Punch list",
-                "title": "Punches",
-                "iconCls": "bookmarks"
+                "iconCls": "bookmarks",
+                "id": "punchListButton",
+                "title": "Punches"
             },
             "designerId": "e1a56a20-198b-4fe2-8379-846009a88f68",
             "masterInstanceId": "b33ea84b-a124-428a-a70a-8ae3b1defb79"

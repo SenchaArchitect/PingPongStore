@@ -18,6 +18,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "main #employeeChooser",
+                "designer|targetType": "Ext.dataview.List",
                 "fn": "onEmployeeChoose",
                 "implHandler": [
                     "var name = record.get('name'),",
@@ -36,9 +38,7 @@
                     "",
                     "nav.push(tabPanel);"
                 ],
-                "name": "itemtap",
-                "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "main #employeeChooser"
+                "name": "itemtap"
             },
             "designerId": "748000a7-7bcb-4694-9878-9002748f55ad"
         },
@@ -106,13 +106,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "punch",
+                "designer|targetType": "Punch",
                 "fn": "onPunchInitialize",
                 "implHandler": [
                     "this.getPunchOutButton().hide();"
                 ],
-                "name": "initialize",
-                "designer|targetType": "Punch",
-                "designer|controlQuery": "punch"
+                "name": "initialize"
             },
             "designerId": "359b2549-0fc0-41b9-bbec-1a12964948d7"
         },
@@ -124,6 +124,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "punch #punchInButton",
+                "designer|targetType": "Ext.Button",
                 "fn": "onPunchIn",
                 "implHandler": [
                     "var punchTimeLabel = this.getPunchTime();",
@@ -145,9 +147,7 @@
                     "updatePunchTimeLabel();",
                     "this.punchTimeInterval = setInterval(updatePunchTimeLabel, 1000);"
                 ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "punch #punchInButton"
+                "name": "tap"
             },
             "designerId": "79cbe749-4ae5-4b05-90d0-acad6a66c576"
         },
@@ -159,6 +159,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "punch #punchOutButton",
+                "designer|targetType": "Ext.Button",
                 "fn": "onPunchOut",
                 "implHandler": [
                     "var punch = Ext.create('Timecard.model.Punch'),",
@@ -178,9 +180,7 @@
                     "",
                     "store.add(punch);"
                 ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "punch #punchOutButton"
+                "name": "tap"
             },
             "designerId": "eed1016c-beae-4658-bcc2-5750939678cb"
         },
@@ -218,10 +218,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "formatTime",
                 "designer|params": [
                     "d"
                 ],
+                "fn": "formatTime",
                 "implHandler": [
                     "return moment(d).format('h:mma [on] D MMMM YYYY');"
                 ]
@@ -236,10 +236,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "timeAgo",
                 "designer|params": [
                     "d"
                 ],
+                "fn": "timeAgo",
                 "implHandler": [
                     "return moment(d).fromNow();"
                 ]
@@ -254,6 +254,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "punchlist",
+                "designer|targetType": "PunchList",
                 "fn": "onPunchSwipe",
                 "implHandler": [
                     "var title = 'Delete',",
@@ -267,9 +269,7 @@
                     "    }",
                     "});"
                 ],
-                "name": "itemswipe",
-                "designer|targetType": "PunchList",
-                "designer|controlQuery": "punchlist"
+                "name": "itemswipe"
             },
             "designerId": "154e5a70-7451-49b1-bbd8-bfdd73ac67fd"
         }
