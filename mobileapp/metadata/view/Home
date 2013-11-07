@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Home",
+        "designer|initialView": true,
         "designer|userAlias": "home",
-        "designer|initialView": true
+        "designer|userClassName": "Home"
     },
     "designerId": "035cf53e-a78c-45dd-ab1e-746a36470acb",
     "cn": [
@@ -32,8 +32,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Dashboard",
-                "iconCls": "home"
+                "iconCls": "home",
+                "title": "Dashboard"
             },
             "designerId": "6b6ef605-7297-4180-96a6-d04582d363fc",
             "masterInstanceId": "b2f21f72-b244-4c9c-bab3-061d990c4ee5"
@@ -46,8 +46,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Orders",
-                "iconCls": "action"
+                "iconCls": "action",
+                "title": "Orders"
             },
             "designerId": "28d54acf-e321-49f8-bc2b-934ecf6d2716",
             "masterInstanceId": "37dd50b8-f912-46ed-bfec-3f7d4b1f0c5d"
@@ -61,8 +61,8 @@
             "codeClass": null,
             "userConfig": {
                 "designer|displayName": "Inventory",
-                "title": "Inventory",
-                "iconCls": "info"
+                "iconCls": "info",
+                "title": "Inventory"
             },
             "designerId": "995b0077-b5f6-4031-a637-38ecfc6b354c",
             "masterInstanceId": "ed6767f7-d20f-4472-938d-d650419277dd"
@@ -102,9 +102,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Employees",
+                "designer|displayName": "Employees",
                 "iconCls": "user",
-                "designer|displayName": "Employees"
+                "title": "Employees"
             },
             "designerId": "b204820c-f006-4a00-9c68-858b0ba6f226",
             "masterInstanceId": "dce7241e-21fe-458c-822b-acda42eb2d3e"

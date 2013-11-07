@@ -10,9 +10,9 @@
         "data": [
             "[{\"Team\":266.6449890136719,\"totaledOrderDate\":\"2012-10-02\"},{\"Enterprise\":7884.83984375,\"totaledOrderDate\":\"2012-11-03\"},{\"Individual\":534.989990234375,\"totaledOrderDate\":\"2012-11-09\"},{\"SMB\":229.3979949951172,\"totaledOrderDate\":\"2012-12-03\"},{\"SMB\":1179.6500244140625,\"totaledOrderDate\":\"2012-12-05\"},{\"SMB\":204.69500732421875,\"totaledOrderDate\":\"2012-12-12\"},{\"Enterprise\":1184.3970184326172,\"totaledOrderDate\":\"2013-03-02\",\"Individual\":9400.117172241211,\"SMB\":154.74200439453125},{\"SMB\":2213.9779510498047,\"totaledOrderDate\":\"2013-03-03\",\"Team\":2371.7099609375}]"
         ],
-        "storeId": "salesHistoryStore",
+        "designer|userAlias": null,
         "designer|userClassName": "SalesHistoryStore",
-        "designer|userAlias": null
+        "storeId": "salesHistoryStore"
     },
     "mockCfgs": [
         "data"

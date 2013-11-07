@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ItemsNavView",
-        "designer|userAlias": "itemsnavview"
+        "designer|userAlias": "itemsnavview",
+        "designer|userClassName": "ItemsNavView"
     },
     "designerId": "ed6767f7-d20f-4472-938d-d650419277dd",
     "cn": [

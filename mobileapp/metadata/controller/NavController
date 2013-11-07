@@ -33,6 +33,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "orderlist",
+                "designer|targetType": "OrderList",
                 "fn": "onOrderTap",
                 "implHandler": [
                     "var nav = this.getOrdersNavView(),",
@@ -51,9 +53,7 @@
                     "});",
                     "nav.push(detail);"
                 ],
-                "name": "itemtap",
-                "designer|targetType": "OrderList",
-                "designer|controlQuery": "orderlist"
+                "name": "itemtap"
             },
             "designerId": "6cd6806c-ee1f-4a46-b31a-00b552ee5c6e"
         },
@@ -94,6 +94,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "orderdetail",
+                "designer|targetType": "OrderDetail",
                 "fn": "onItemSelect",
                 "implHandler": [
                     "var nav = this.getOrdersNavView(),",
@@ -103,9 +105,7 @@
                     "itemPick.setRecord(record);",
                     "nav.push(itemPick);"
                 ],
-                "name": "itemselect",
-                "designer|targetType": "OrderDetail",
-                "designer|controlQuery": "orderdetail"
+                "name": "itemselect"
             },
             "designerId": "59a76e92-3097-4202-a79b-e1bca9fcbe16"
         },
@@ -146,6 +146,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "itempick",
+                "designer|targetType": "ItemPick",
                 "fn": "onItemPick",
                 "implHandler": [
                     "var nav = this.getOrdersNavView(),",
@@ -168,9 +170,7 @@
                     "    record.set('packDate', null);",
                     "}"
                 ],
-                "name": "itempick",
-                "designer|targetType": "ItemPick",
-                "designer|controlQuery": "itempick"
+                "name": "itempick"
             },
             "designerId": "0d6162ab-d8d5-48c7-b841-2d8a80e45f7c"
         },
@@ -182,6 +182,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "orderdetail",
+                "designer|targetType": "OrderDetail",
                 "fn": "onShipOrderTap",
                 "implHandler": [
                     "var nav = this.getOrdersNavView(),",
@@ -212,9 +214,7 @@
                     "    Ext.Msg.alert('Error', 'No items have been packed yet.');",
                     "}"
                 ],
-                "name": "shipordertap",
-                "designer|targetType": "OrderDetail",
-                "designer|controlQuery": "orderdetail"
+                "name": "shipordertap"
             },
             "designerId": "a01a97aa-9fb9-4f29-9b2d-02936e32fb53"
         },
@@ -241,6 +241,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "orderconfirm",
+                "designer|targetType": "OrderConfirm",
                 "fn": "onConfirmTap",
                 "implHandler": [
                     "var nav = this.getOrdersNavView(),",
@@ -269,9 +271,7 @@
                     "});",
                     ""
                 ],
-                "name": "confirmtap",
-                "designer|targetType": "OrderConfirm",
-                "designer|controlQuery": "orderconfirm"
+                "name": "confirmtap"
             },
             "designerId": "5030cad5-2088-4790-b511-8ad305a9829a"
         },
@@ -296,13 +296,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "orderlist",
+                "designer|targetType": "OrderList",
                 "fn": "onOrderListShow",
                 "implHandler": [
                     "this.getHome().getTabBar().show();"
                 ],
-                "name": "show",
-                "designer|targetType": "OrderList",
-                "designer|controlQuery": "orderlist"
+                "name": "show"
             },
             "designerId": "069c2669-0b70-4ec2-bb69-1e83b0427435"
         },
@@ -314,6 +314,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "dashboard",
+                "designer|targetType": "Dashboard",
                 "fn": "onPanelShow",
                 "implHandler": [
                     "this.getHome().getTabBar().show();",
@@ -322,9 +324,7 @@
                     "    params: {category: null}",
                     "});"
                 ],
-                "name": "show",
-                "designer|targetType": "Dashboard",
-                "designer|controlQuery": "dashboard"
+                "name": "show"
             },
             "designerId": "509a7e23-232f-4fba-b41c-86063a982da7"
         },
@@ -336,6 +336,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "saleshistorychart",
+                "designer|targetType": "SalesHistoryChart",
                 "fn": "onChartFilterStateChange",
                 "implHandler": [
                     "var pieChart = Ext.getCmp('pieChart'),",
@@ -363,9 +365,7 @@
                     "var filter = new RegExp(filters.join('|'));",
                     "Ext.StoreManager.lookup('ordersStore').filter('category', filter);"
                 ],
-                "name": "filterstatechange",
-                "designer|targetType": "SalesHistoryChart",
-                "designer|controlQuery": "saleshistorychart"
+                "name": "filterstatechange"
             },
             "designerId": "88028bb7-f197-4342-b194-6e9996989b83"
         },
@@ -390,15 +390,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "orderlist",
+                "designer|targetType": "OrderList",
                 "fn": "onListSegbuttontap",
                 "implHandler": [
                     "var legend = this.getLegend(),",
                     "    legendStore = legend.getStore();",
                     "legendStore.findRecord('name', category).set('disabled', !pressed);"
                 ],
-                "name": "segbuttontap",
-                "designer|targetType": "OrderList",
-                "designer|controlQuery": "orderlist"
+                "name": "segbuttontap"
             },
             "designerId": "4e90e9af-e0d3-4994-9f02-2096e88c84a3"
         },
@@ -410,15 +410,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "itemlist",
+                "designer|targetType": "ItemList",
                 "fn": "onInventoryShow",
                 "implHandler": [
                     "this.getHome().getTabBar().show();",
                     "",
                     "Ext.StoreManager.lookup('itemsStore').load();"
                 ],
-                "name": "show",
-                "designer|targetType": "ItemList",
-                "designer|controlQuery": "itemlist"
+                "name": "show"
             },
             "designerId": "7dcba1c8-7b57-4205-903c-4f0da1c0d3df"
         },
@@ -430,6 +430,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "itemlist",
+                "designer|targetType": "ItemList",
                 "fn": "onInventoryItemTap",
                 "implHandler": [
                     "var nav = this.getItemsNavView(),",
@@ -449,9 +451,7 @@
                     "description.setData(record.data);",
                     "nav.push(detail);"
                 ],
-                "name": "itemtap",
-                "designer|targetType": "ItemList",
-                "designer|controlQuery": "itemlist"
+                "name": "itemtap"
             },
             "designerId": "8970ec05-5abf-4e71-bd08-1de04b94d582"
         },
@@ -463,14 +463,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "employeelist",
+                "designer|targetType": "EmployeeList",
                 "fn": "onEmployeeListShow",
                 "implHandler": [
                     "this.getHome().getTabBar().show();",
                     "this.getNewEmployeeButton().show();"
                 ],
-                "name": "show",
-                "designer|targetType": "EmployeeList",
-                "designer|controlQuery": "employeelist"
+                "name": "show"
             },
             "designerId": "dea68eb3-7abd-47ab-89bf-a0723d420d28"
         },
@@ -551,6 +551,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "employeesnavview #newEmployeeButton",
+                "designer|targetType": "Ext.Button",
                 "fn": "onNewEmployeeTap",
                 "implHandler": [
                     "var nav = this.getEmployeesNavView(),",
@@ -569,9 +571,7 @@
                     "",
                     "nav.push(employeeEdit);"
                 ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "employeesnavview #newEmployeeButton"
+                "name": "tap"
             },
             "designerId": "5bf31ffe-96bc-4735-b073-ad72d12a35df"
         },
@@ -583,6 +583,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "employeelist",
+                "designer|targetType": "EmployeeList",
                 "fn": "onEmployeeSelect",
                 "implHandler": [
                     "var nav = this.getEmployeesNavView(),",
@@ -605,9 +607,7 @@
                     "",
                     "nav.push(employeeEdit);"
                 ],
-                "name": "itemtap",
-                "designer|targetType": "EmployeeList",
-                "designer|controlQuery": "employeelist"
+                "name": "itemtap"
             },
             "designerId": "74ae01d7-7fe8-4472-8754-a8954df0be4d"
         },
@@ -619,6 +619,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "employeeedit #saveEmployeeButton",
+                "designer|targetType": "Ext.Button",
                 "fn": "onSaveEmployeeTap",
                 "implHandler": [
                     "var employee = this.getEmployeeEdit().getRecord(),",
@@ -641,9 +643,7 @@
                     "",
                     "nav.pop();"
                 ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "employeeedit #saveEmployeeButton"
+                "name": "tap"
             },
             "designerId": "dbbc2ed1-03f8-43b9-9b22-4d0f6682b6a5"
         },
@@ -655,6 +655,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "employeeedit #removeEmployeeButton",
+                "designer|targetType": "Ext.Button",
                 "fn": "onRemoveEmployeeTap",
                 "implHandler": [
                     "var employee = this.getEmployeeEdit().getRecord(),",
@@ -665,9 +667,7 @@
                     "",
                     "nav.pop();"
                 ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "employeeedit #removeEmployeeButton"
+                "name": "tap"
             },
             "designerId": "0ef9b75a-699e-4ca9-a4d1-5bcd6c4551cf"
         }

@@ -1,0 +1,79 @@
+{
+   "name": "Fulfill",
+   "indexHtmlPath": "index.html",
+   "url": null,
+   "js": [
+      {
+         "path": "touch/sencha-touch.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "bootstrap.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true,
+         "update": "delta"
+      },
+      {
+         "path": "app/override/chart/Legend.js"
+      }
+   ],
+   "css": [
+      {
+         "path": "resources/css/app.css",
+         "update": "delta"
+      },
+      {
+         "update": "delta",
+         "platform": [
+            "phone",
+            "tablet",
+            "desktop"
+         ],
+         "theme": "Default",
+         "path": "resources/css/sencha-touch.css",
+         "_architect_active_theme": true
+      },
+      {
+         "path": "resources/css/app.css"
+      }
+   ],
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "resources/images",
+      "resources/icons",
+      "resources/startup"
+   ],
+   "ignore": [
+      ".svn$"
+   ],
+   "archivePath": "archive",
+   "requires": [],
+   "id": "598ebf91-4836-4fa7-8b99-9d9ccc351b6c",
+   "_architect": {
+      "_comment": "Please don't edit. This is Architect data.",
+      "name": "Fulfill",
+      "css": [
+         {
+            "path": "resources/css/app.css"
+         }
+      ],
+      "js": [
+         {
+            "path": "app/override/chart/Legend.js"
+         }
+      ],
+      "resources": [],
+      "requires": []
+   }
+}

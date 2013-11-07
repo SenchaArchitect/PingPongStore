@@ -6,9 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Library",
         "basePath": "touch/",
-        "debug": true
+        "debug": true,
+        "designer|userClassName": "Library",
+        "theme": null
     },
     "designerId": "8ae84dde-fac1-4003-98bd-ce1ec6195ddb"
 }

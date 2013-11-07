@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ItemDetail",
         "designer|userAlias": "itemdetail",
+        "designer|userClassName": "ItemDetail",
         "layout": "vbox",
         "scrollable": null
     },
@@ -21,8 +21,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 2,
                 "id": "inventoryItemDescription",
+                "layout|flex": 2,
                 "scrollable": "vertical"
             },
             "designerId": "c30cf869-e091-43a6-9fe0-87c40d98a4e2",
@@ -35,6 +35,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|displayName": "tpl",
                         "implHandler": [
                             "<div class=\"list-item item-detail\">",
                             "",
@@ -50,8 +51,7 @@
                             "\t</div>",
                             "",
                             "</div>"
-                        ],
-                        "designer|displayName": "tpl"
+                        ]
                     },
                     "designerId": "a199d8c3-9f3f-4b0d-bb4c-2296199b7d94"
                 }
@@ -65,14 +65,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 5,
-                "height": "100%",
-                "id": "orderListByItem",
                 "designer|displayName": "order list, by item",
                 "disableSelection": true,
                 "emptyText": "No orders to fulfill.",
-                "store": "ordersByItemStore",
+                "height": "100%",
+                "id": "orderListByItem",
+                "layout|flex": 5,
                 "onItemDisclosure": null,
+                "store": "ordersByItemStore",
                 "striped": true
             },
             "designerId": "ab78fcbc-0cde-4297-a4b6-bfc6ae5d0231",
@@ -85,14 +85,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|displayName": "itemTpl",
                         "implHandler": [
                             "<div class=\"order-list-element order-{category}\">",
                             "    <div class=\"customer\">{name}</div>",
                             "    <div class=\"orderId\">{state}{orderId}</div>",
                             "    <div class=\"total\">{total:this.usMoney}</div>",
                             "</div>"
-                        ],
-                        "designer|displayName": "itemTpl"
+                        ]
                     },
                     "designerId": "59af2f2f-904c-44e4-9a93-baac156c019c",
                     "cn": [
@@ -104,10 +104,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "usMoney",
                                 "designer|params": [
                                     "num"
                                 ],
+                                "fn": "usMoney",
                                 "implHandler": [
                                     "return '$' + num.toFixed(2);"
                                 ]

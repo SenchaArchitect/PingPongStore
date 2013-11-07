@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "margin": null,
-        "designer|userClassName": "SalesHistoryChart",
-        "designer|userAlias": "saleshistorychart",
         "colors": [
             "[\"#444444\", \"#138CBF\", \"#141414\", \"#04CC98\"]"
         ],
+        "designer|userAlias": "saleshistorychart",
+        "designer|userClassName": "SalesHistoryChart",
+        "margin": null,
         "store": "salesHistoryStore"
     },
     "designerId": "f70a79c2-5f6a-4a8d-8ece-0404cf3bab11",
@@ -137,11 +137,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onUpdateLegendStore",
                 "designer|params": [
                     "store",
                     "record"
                 ],
+                "fn": "onUpdateLegendStore",
                 "implHandler": [
                     "this.callParent(arguments);",
                     "this.fireEvent('filterstatechange', record.get('index'), record.get('disabled'));"

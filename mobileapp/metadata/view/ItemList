@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ItemList",
         "designer|userAlias": "itemlist",
+        "designer|userClassName": "ItemList",
         "disableSelection": true,
         "emptyText": "No items, but you look dashing all the same.",
-        "store": "itemsStore",
-        "onItemDisclosure": null
+        "onItemDisclosure": null,
+        "store": "itemsStore"
     },
     "designerId": "c6723c85-9564-4797-b897-cf39e2c62790",
     "cn": [
@@ -23,6 +23,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "itemTpl",
                 "disableFormats": true,
                 "implHandler": [
                     "<div class=\"list-item\">",
@@ -37,8 +38,7 @@
                     "    </div>",
                     "",
                     "</div>"
-                ],
-                "designer|displayName": "itemTpl"
+                ]
             },
             "designerId": "3f7f2654-a2e7-47c8-b86c-0ea87b54a567",
             "cn": [

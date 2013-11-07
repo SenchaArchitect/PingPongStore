@@ -2,3 +2,10 @@
 .DS_Store
 .idea
 .sass-cache
+.sencha
+.sencha_backup
+ext
+touch
+build
+build.xml
+build.settings

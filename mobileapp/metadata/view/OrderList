@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "OrderList",
         "designer|userAlias": "orderlist",
+        "designer|userClassName": "OrderList",
         "disableSelection": true,
         "emptyText": "No orders to fulfill.",
-        "store": "ordersStore",
-        "onItemDisclosure": null
+        "onItemDisclosure": null,
+        "store": "ordersStore"
     },
     "designerId": "d4d44468-4781-4b60-a297-65c74e3fb5dd",
     "cn": [
@@ -23,14 +23,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "itemTpl",
                 "implHandler": [
                     "<div class=\"order-list-element order-{category}\">",
                     "    <div class=\"customer\">{name}</div>",
                     "    <div class=\"orderId\">{state}{orderId}</div>",
                     "    <div class=\"total\">{total:this.usMoney}</div>",
                     "</div>"
-                ],
-                "designer|displayName": "itemTpl"
+                ]
             },
             "designerId": "ddcc2bba-5fd0-400d-b7c6-19396c683826",
             "cn": [
@@ -42,10 +42,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "usMoney",
                         "designer|params": [
                             "num"
                         ],
+                        "fn": "usMoney",
                         "implHandler": [
                             "return '$' + num.toFixed(2);"
                         ]
@@ -99,12 +99,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1,
+                        "allowMultiple": true,
                         "docked": null,
                         "hidden": null,
                         "id": "segButton",
                         "itemId": "mysegmentedbutton",
-                        "allowMultiple": true
+                        "layout|flex": 1
                     },
                     "designerId": "08bba945-de46-420d-9f14-7146a66312e7",
                     "cn": [
@@ -130,9 +130,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "disabled": null,
                                 "layout|flex": 1,
                                 "pressed": true,
-                                "disabled": null,
                                 "text": "Individual"
                             },
                             "designerId": "8470d2e6-95c3-42b7-bdf7-6a591fa46cc9"
@@ -173,6 +173,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "delegate": "button",
+                                "designer|targetType": "Ext.Button",
                                 "fn": "onButtonTap",
                                 "implHandler": [
                                     "var segButton = Ext.getCmp('segButton'),",
@@ -184,9 +186,7 @@
                                     "}",
                                     "this.fireEvent('segbuttontap', button.getText(), isPressed);"
                                 ],
-                                "name": "tap",
-                                "designer|targetType": "Ext.Button",
-                                "delegate": "button"
+                                "name": "tap"
                             },
                             "designerId": "8d999a2f-be50-41cd-8ed8-10a5b1504867"
                         },

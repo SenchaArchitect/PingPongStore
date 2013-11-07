@@ -9,10 +9,10 @@
         "cls": [
             "corner2"
         ],
-        "ui": "",
-        "designer|userClassName": "OrderDetail",
         "designer|userAlias": "orderdetail",
-        "layout": "vbox"
+        "designer|userClassName": "OrderDetail",
+        "layout": "vbox",
+        "ui": ""
     },
     "designerId": "af575e65-2e11-43e5-821d-49fd6bcd0fdd",
     "cn": [
@@ -52,13 +52,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|displayName": "tpl",
                         "implHandler": [
                             "<div class=\"order-detail-header\">",
                             "    <div class=\"orderId\">{state}{orderId}</div>",
                             "    <div class=\"orderDate\">{orderDate:date('m/d/Y')}</div>",
                             "</div>"
-                        ],
-                        "designer|displayName": "tpl"
+                        ]
                     },
                     "designerId": "7f4ece0b-f8f2-4a7d-b3b4-4f3bafa50b14"
                 }
@@ -72,12 +72,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
-                "itemId": "orderDetailItemList",
                 "disableSelection": true,
                 "emptyText": "All line items have already been fulfilled.",
-                "store": "lineItemsStore",
-                "grouped": true
+                "grouped": true,
+                "itemId": "orderDetailItemList",
+                "layout|flex": 1,
+                "store": "lineItemsStore"
             },
             "designerId": "d2121016-df31-4a10-8a4b-d5c963e2c206",
             "cn": [
@@ -89,6 +89,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|displayName": "itemTpl",
                         "implHandler": [
                             "<div class=\"list-item\">",
                             "",
@@ -107,8 +108,7 @@
                             "    </div>",
                             "",
                             "</div>"
-                        ],
-                        "designer|displayName": "itemTpl"
+                        ]
                     },
                     "designerId": "f4da5155-5ea7-4e44-b72d-891a9ed82ff6"
                 },
@@ -153,8 +153,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "mybutton",
-                        "ui": "confirm",
-                        "text": "Ship Order"
+                        "text": "Ship Order",
+                        "ui": "confirm"
                     },
                     "designerId": "28a81a72-e653-4ea0-8cf4-d0f9ce5e834a",
                     "cn": [
@@ -213,10 +213,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "setData",
                 "designer|params": [
                     "data"
                 ],
+                "fn": "setData",
                 "implHandler": [
                     "this.callParent(arguments);",
                     "this.child('#detail').setData(data);"

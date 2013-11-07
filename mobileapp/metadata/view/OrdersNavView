@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "OrdersNavView",
-        "designer|userAlias": "ordersnavview"
+        "designer|userAlias": "ordersnavview",
+        "designer|userClassName": "OrdersNavView"
     },
     "designerId": "37dd50b8-f912-46ed-bfec-3f7d4b1f0c5d",
     "cn": [

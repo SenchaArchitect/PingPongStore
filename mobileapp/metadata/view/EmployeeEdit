@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EmployeeEdit",
-        "designer|userAlias": "employeeedit"
+        "designer|userAlias": "employeeedit",
+        "designer|userClassName": "EmployeeEdit"
     },
     "designerId": "c4bcb204-ec25-49bb-87ba-7f62fdf42a82",
     "cn": [
@@ -32,12 +32,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "autoCapitalize": true,
                         "itemId": "employeeEditName",
                         "label": "Name",
                         "name": "name",
-                        "required": true,
-                        "autoCapitalize": true,
-                        "placeHolder": "Wes Mantooth"
+                        "placeHolder": "Wes Mantooth",
+                        "required": true
                     },
                     "designerId": "7fd59706-1011-4e90-b04f-2068fe4e999f"
                 },
@@ -49,12 +49,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "employeeEditTitle",
-                        "label": "Title",
-                        "name": "title",
                         "autoCapitalize": true,
                         "autoComplete": true,
                         "autoCorrect": true,
+                        "id": "employeeEditTitle",
+                        "label": "Title",
+                        "name": "title",
                         "placeHolder": "Lead Anchor"
                     },
                     "designerId": "df437518-be38-46f9-b212-5d6fdd53e2b1"
@@ -69,9 +69,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "Button container",
                 "margin": null,
-                "padding": 10,
-                "designer|displayName": "Button container"
+                "padding": 10
             },
             "designerId": "e12e2162-b922-4acc-8ca4-9d5df24b0c15",
             "cn": [
@@ -84,8 +84,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "saveEmployeeButton",
-                        "ui": "action",
-                        "text": "Save employee"
+                        "text": "Save employee",
+                        "ui": "action"
                     },
                     "designerId": "90c76a60-054d-4852-98f9-775a8aea2ca2"
                 },
@@ -99,8 +99,8 @@
                     "userConfig": {
                         "id": "removeEmployeeButton",
                         "margin": "10 0 0 0",
-                        "ui": "decline",
-                        "text": "Remove employee"
+                        "text": "Remove employee",
+                        "ui": "decline"
                     },
                     "designerId": "569cef9b-c28c-40f5-a229-711a35cfa217"
                 }

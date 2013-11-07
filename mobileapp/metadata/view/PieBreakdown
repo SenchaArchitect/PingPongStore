@@ -6,11 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PieBreakdown",
-        "designer|userAlias": "pieBreakdown",
         "colors": [
             "[\"#444444\", \"#138CBF\", \"#141414\", \"#04CC98\"]"
         ],
+        "designer|userAlias": "pieBreakdown",
+        "designer|userClassName": "PieBreakdown",
         "store": "pieChartDataStore"
     },
     "designerId": "92e98999-b204-44c7-b30e-c68b82acd0da",

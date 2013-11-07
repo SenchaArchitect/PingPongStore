@@ -32,9 +32,9 @@
             "    }  ",
             "]"
         ],
+        "designer|userClassName": "EmployeesStore",
         "model": "Employee",
-        "storeId": "employeesStore",
-        "designer|userClassName": "EmployeesStore"
+        "storeId": "employeesStore"
     },
     "designerId": "1b194a28-f3ee-45d9-9687-0ef4e6816449",
     "cn": [

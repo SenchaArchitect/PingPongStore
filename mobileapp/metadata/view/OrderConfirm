@@ -35,11 +35,11 @@
             "        ",
             "}"
         ],
-        "style": null,
-        "styleHtmlContent": true,
-        "designer|userClassName": "OrderConfirm",
         "designer|userAlias": "orderconfirm",
-        "scrollable": "vertical"
+        "designer|userClassName": "OrderConfirm",
+        "scrollable": "vertical",
+        "style": null,
+        "styleHtmlContent": true
     },
     "mockCfgs": [
         "data"
@@ -68,8 +68,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "mybutton3",
-                        "ui": "confirm",
-                        "text": "Confirm Shipment"
+                        "text": "Confirm Shipment",
+                        "ui": "confirm"
                     },
                     "designerId": "979ee522-4c61-4a72-9945-4539d7f26519",
                     "cn": [
@@ -101,6 +101,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "tpl",
                 "implHandler": [
                     "<div class=\"customerCt\">",
                     "    <h1>{name}</h1>",
@@ -143,8 +144,7 @@
                     "        </ul>",
                     "    </div>",
                     "</tpl>"
-                ],
-                "designer|displayName": "tpl"
+                ]
             },
             "designerId": "9d72347b-a400-4129-ac63-646cf5b7fdbf"
         },

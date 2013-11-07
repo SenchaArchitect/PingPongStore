@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "orderId",
-        "designer|userClassName": "Orders"
+        "designer|userClassName": "Orders",
+        "idProperty": "orderId"
     },
     "designerId": "2bd3f316-4a6a-4a23-b751-e30ec54c2f69",
     "cn": [
@@ -116,7 +116,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "total"
+                "name": "total",
+                "type": "float"
             },
             "designerId": "644a513c-c91d-4733-95a0-5cc27c7fb8a1"
         },

@@ -27,9 +27,9 @@
             "    perUnitPrice: 499.99",
             "}]"
         ],
+        "designer|userClassName": "ItemsStore",
         "model": "Item",
-        "storeId": "itemsStore",
-        "designer|userClassName": "ItemsStore"
+        "storeId": "itemsStore"
     },
     "mockCfgs": [
         "data"

@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EmployeesNavView",
-        "designer|userAlias": "employeesnavview"
+        "designer|userAlias": "employeesnavview",
+        "designer|userClassName": "EmployeesNavView"
     },
     "designerId": "dce7241e-21fe-458c-822b-acda42eb2d3e",
     "cn": [
@@ -32,8 +32,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "align": "right",
-                        "itemId": "newEmployeeButton",
                         "iconCls": "add",
+                        "itemId": "newEmployeeButton",
                         "text": null
                     },
                     "designerId": "3c4e0c66-89b2-4862-aa54-73515c2cd4b9"
@@ -48,8 +48,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Employees",
-                "designer|displayName": "Employee list"
+                "designer|displayName": "Employee list",
+                "title": "Employees"
             },
             "designerId": "a3908faa-cea3-416e-aa31-b2fcb4ea2d85",
             "masterInstanceId": "5dff8fb4-2ffa-454e-8ade-f9559a552aad"

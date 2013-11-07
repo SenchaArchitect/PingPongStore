@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "employeeId",
-        "designer|userClassName": "Employee"
+        "designer|userClassName": "Employee",
+        "idProperty": "employeeId"
     },
     "designerId": "fb73e33a-639c-4458-9394-054bf5f9297b",
     "cn": [

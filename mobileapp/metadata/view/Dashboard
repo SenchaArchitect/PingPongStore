@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "html": null,
-        "designer|userClassName": "Dashboard",
         "designer|userAlias": "dashboard",
+        "designer|userClassName": "Dashboard",
+        "html": null,
         "layout": "vbox"
     },
     "designerId": "b2f21f72-b244-4c9c-bab3-061d990c4ee5",

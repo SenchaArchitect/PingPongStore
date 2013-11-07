@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EmployeeList",
         "designer|userAlias": "employeelist",
+        "designer|userClassName": "EmployeeList",
         "store": "employeesStore",
         "striped": true
     },
@@ -21,10 +21,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "itemTpl",
                 "implHandler": [
                     "<div>{name}: {title}</div>"
-                ],
-                "designer|displayName": "itemTpl"
+                ]
             },
             "designerId": "466599b4-208b-4e7b-8c55-491bd6db4b1b"
         }

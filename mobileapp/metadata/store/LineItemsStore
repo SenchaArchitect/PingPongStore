@@ -27,9 +27,9 @@
             "    imgUrl: 'tables/tbhom.jpg'",
             "}]"
         ],
+        "designer|userClassName": "LineItemsStore",
         "model": "LineItem",
-        "storeId": "lineItemsStore",
-        "designer|userClassName": "LineItemsStore"
+        "storeId": "lineItemsStore"
     },
     "mockCfgs": [
         "data"
@@ -83,10 +83,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "groupFn",
                         "designer|params": [
                             "item"
                         ],
+                        "fn": "groupFn",
                         "implHandler": [
                             "if (item.get('packDate')) {",
                             "    if (item.get('shipDate')) {",

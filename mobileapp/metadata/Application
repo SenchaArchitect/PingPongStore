@@ -6,11 +6,26 @@
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "NavController"
+        ],
+        "icon": [
+            "{",
+            "    57: 'resources/icons/Icon.png',",
+            "    72: 'resources/icons/Icon-72.png',",
+            "    114: 'resources/icons/Icon@2x.png'",
+            "}"
+        ],
         "models": [
             "LineItem",
             "Orders",
             "Item",
             "Employee"
+        ],
+        "name": "Fulfill",
+        "requires": [
+            "Ext.DateExtras",
+            "Ext.plugin.PullRefresh"
         ],
         "stores": [
             "LineItemsStore",
@@ -37,22 +52,7 @@
             "EmployeesNavView",
             "EmployeeList",
             "EmployeeEdit"
-        ],
-        "requires": [
-            "Ext.DateExtras",
-            "Ext.chart.*"
-        ],
-        "controllers": [
-            "NavController"
-        ],
-        "icon": [
-            "{",
-            "    57: 'resources/icons/Icon.png',",
-            "    72: 'resources/icons/Icon-72.png',",
-            "    114: 'resources/icons/Icon@2x.png'",
-            "}"
-        ],
-        "name": "Fulfill"
+        ]
     },
     "designerId": "application"
 }

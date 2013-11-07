@@ -10,8 +10,8 @@
         "data": [
             "[{\"category\":\"Enterprise\",\"total\":9069.236862182617},{\"category\":\"Individual\",\"total\":9935.107162475586},{\"category\":\"SMB\",\"total\":3982.4629821777344},{\"category\":\"Team\",\"total\":2638.354949951172}]"
         ],
-        "storeId": "pieChartDataStore",
-        "designer|userClassName": "PieChartDataStore"
+        "designer|userClassName": "PieChartDataStore",
+        "storeId": "pieChartDataStore"
     },
     "mockCfgs": [
         "data"

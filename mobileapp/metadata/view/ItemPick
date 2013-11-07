@@ -6,16 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
-        "record": false,
         "cls": [
             "corner"
         ],
         "data": [
             "{}"
         ],
-        "designer|userClassName": "ItemPick",
         "designer|userAlias": "itempick",
-        "layout": "vbox"
+        "designer|userClassName": "ItemPick",
+        "layout": "vbox",
+        "record": false
     },
     "mockCfgs": [
         "data"
@@ -37,11 +37,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
                 "cls": [
                     "branding"
                 ],
                 "itemId": "detail",
+                "layout|flex": 1,
                 "padding": null
             },
             "designerId": "8ef6a300-b14d-4988-b0a0-c2c1a4ab0e42",
@@ -54,14 +54,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|displayName": "tpl",
                         "implHandler": [
                             "<div class=\"item-detail\">",
                             "    ",
                             "    <img class=\"product-thumbnail\" src=\"imgs/{imgUrl}\" />",
                             "",
                             "</div>"
-                        ],
-                        "designer|displayName": "tpl"
+                        ]
                     },
                     "designerId": "64711ea0-9392-43f5-8744-2b49d55f4172"
                 },
@@ -118,9 +118,9 @@
                     "userConfig": {
                         "itemId": "pickBtn",
                         "margin": 10,
-                        "ui": "action",
                         "scope": null,
-                        "text": "Pack {quantity} Item(s)"
+                        "text": "Pack {quantity} Item(s)",
+                        "ui": "action"
                     },
                     "designerId": "a31ad055-7aa4-4bb7-b672-f5a36e482b76",
                     "cn": [
@@ -164,10 +164,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "setRecord",
                 "designer|params": [
                     "newRecord"
                 ],
+                "fn": "setRecord",
                 "implHandler": [
                     "this.callParent(arguments);",
                     "if (newRecord) {",
