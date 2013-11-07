@@ -12,4 +12,7 @@ To get set up...
         ln -s ../desktopapp public/desktop
         ln -s ../timecard public/timecard
 
+5. Create a MySQL database named "orders", and create its schemas using the createSchema(WithData).sql script found in the dbschema directory.
+6. Update nodebackend/config.json with the correct information for connecting to your MySQL database.
+
 Whenever you want to start the app (desktop, mobile, or timecard, cd into nodebackend and do npm start). Ctrl-C will stop it.
