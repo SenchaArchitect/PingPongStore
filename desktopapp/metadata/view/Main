@@ -8,9 +8,9 @@
     "userConfig": {
         "container|align": "stretch",
         "container|padding": "20 10 10",
-        "designer|userClassName": "Main",
-        "designer|userAlias": "main",
         "designer|initialView": true,
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
         "layout": "vbox"
     },
     "designerId": "9b7d8a97-4dad-4356-9377-6a8711054938",
@@ -33,13 +33,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": null,
-                "layout|margins": "10 0 0",
                 "cls": "globalMsg",
+                "designer|displayName": "messages",
                 "hidden": true,
                 "html": null,
                 "itemId": "messages",
-                "designer|displayName": "messages"
+                "layout|flex": null,
+                "layout|margins": "10 0 0"
             },
             "designerId": "b405307b-1c62-46b7-9df9-6a12c3e0d164"
         },
@@ -51,13 +51,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
-                "layout|margins": "10 0 0",
+                "designer|displayName": null,
                 "frame": true,
                 "itemId": "cardCt",
-                "margin": "",
-                "designer|displayName": null,
-                "layout": "card"
+                "layout": "card",
+                "layout|flex": 1,
+                "layout|margins": "10 0 0",
+                "margin": ""
             },
             "designerId": "1be7ab7f-0a56-408d-8c4a-c101b4a1a786",
             "cn": [
@@ -85,8 +85,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": "mainPanel",
-                        "frame": null,
                         "designer|displayName": "Customer Detail",
+                        "frame": null,
                         "header": null
                     },
                     "designerId": "0f56db72-205d-484c-97a9-e593160f898c",
@@ -143,11 +143,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "displayMessage",
                 "designer|params": [
                     "message",
                     "howLong"
                 ],
+                "fn": "displayMessage",
                 "implHandler": [
                     "howLong = howLong || 5000;",
                     "var msg = this.child('#messages');",

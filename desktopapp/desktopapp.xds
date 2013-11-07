@@ -1,6 +1,11 @@
 {
     "name": "desktopapp",
     "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.1.33",
+            "frameworkVersion": "4.2.1.883"
+        },
         "spacesToIndent": 4,
         "lineEnding": "LF",
         "genTimestamps": false,
@@ -11,12 +16,26 @@
         "undefined": "MyApp.",
         "cloudFoundryTargetUrl": "",
         "cloudFoundryUserName": "",
-        "cloudFoundryPassword": ""
+        "cloudFoundryPassword": "",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "sdkPath": "",
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
     },
-    "xdsVersion": "2.3.0",
-    "xdsBuild": 0,
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 1328,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000503,
+    "upgradeVersion": 300000000002,
     "framework": "ext42",
     "viewOrderMap": {
         "view": [

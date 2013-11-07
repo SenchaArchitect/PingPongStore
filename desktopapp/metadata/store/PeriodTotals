@@ -7,9 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": false,
-        "model": "PeriodTotal",
-        "storeId": "PeriodTotals",
-        "designer|userClassName": "PeriodTotals",
         "data": [
             "[",
             "    {quarter:\"2012-Q1\", total:138}, ",
@@ -18,7 +15,10 @@
             "    {quarter:\"2012-Q4\", total:12448}, ",
             "    {quarter:\"2013-Q1\", total:18790}",
             "]"
-        ]
+        ],
+        "designer|userClassName": "PeriodTotals",
+        "model": "PeriodTotal",
+        "storeId": "PeriodTotals"
     },
     "mockCfgs": [
         "data"
@@ -33,8 +33,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "extraParams": null,
                 "directFn": "Fulfill.ss.DXCustomers.getCustomerDetail",
+                "extraParams": null,
                 "paramOrder": [
                     "customerId"
                 ]

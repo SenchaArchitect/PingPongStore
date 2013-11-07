@@ -10,10 +10,10 @@
         "data": [
             "['Grandparent', 'Parent', 'Self']"
         ],
-        "html": null,
-        "itemId": "breadcrumbs",
+        "designer|userAlias": "breadcrumbs",
         "designer|userClassName": "Breadcrumbs",
-        "designer|userAlias": "breadcrumbs"
+        "html": null,
+        "itemId": "breadcrumbs"
     },
     "mockCfgs": [
         "data"
@@ -28,6 +28,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "tpl",
                 "implHandler": [
                     "<tpl for=\".\">",
                     "{% if (xindex < xcount) { %}",
@@ -36,8 +37,7 @@
                     "    <span class=\"current\">{.}</span>",
                     "{% } %}",
                     "</tpl>"
-                ],
-                "designer|displayName": "tpl"
+                ]
             },
             "designerId": "80b54eae-5938-4f59-a17f-c0f06c8c6b13"
         },

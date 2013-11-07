@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "MainController"
+        ],
         "models": [
             "Customer",
             "Order",
@@ -13,6 +16,10 @@
             "Item",
             "CustomerCategory",
             "PeriodTotal"
+        ],
+        "name": "Orders",
+        "requires": [
+            "Ext.util.Point"
         ],
         "views": [
             "Customers",
@@ -22,12 +29,7 @@
             "ContactInfo",
             "Main",
             "Breadcrumbs"
-        ],
-        "autoCreateViewport": true,
-        "controllers": [
-            "MainController"
-        ],
-        "name": "Orders"
+        ]
     },
     "designerId": "application"
 }

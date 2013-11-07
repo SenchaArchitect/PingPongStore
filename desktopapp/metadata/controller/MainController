@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "MainController",
         "stores": [
             "Customers",
             "Orders",
@@ -13,8 +14,7 @@
             "PeriodTotals",
             "CustomerCategories",
             "Items"
-        ],
-        "designer|userClassName": "MainController"
+        ]
     },
     "designerId": "e8527c92-ceb8-4982-a9ac-d42633aec5b6",
     "cn": [
@@ -26,6 +26,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "customers",
+                "designer|targetType": "Customers",
                 "fn": "onCustomerSelect",
                 "implHandler": [
                     "var detailCard = this.getCustomerDetail();",
@@ -41,9 +43,7 @@
                     "this.getPeriodTotalsStore().load(args);"
                 ],
                 "name": "customerselect",
-                "scope": "me",
-                "designer|targetType": "Customers",
-                "designer|controlQuery": "customers"
+                "scope": "me"
             },
             "designerId": "6415a5be-3a2e-47f5-acdc-f1d7f9563de2"
         },
@@ -94,6 +94,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "panel",
+                "designer|targetType": "CustomerDetail",
                 "fn": "onOrderSelect",
                 "implHandler": [
                     "var orderCard = this.getOrderDetail();",
@@ -109,9 +111,7 @@
                     ""
                 ],
                 "name": "orderselect",
-                "scope": "me",
-                "designer|targetType": "CustomerDetail",
-                "designer|controlQuery": "panel"
+                "scope": "me"
             },
             "designerId": "e8119546-3c69-402b-9455-5b8bd0ba49d5"
         },
@@ -123,14 +123,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "main > #cardCt > component",
+                "designer|targetType": "Ext.Component",
                 "fn": "onCardSwitch",
                 "implHandler": [
                     "this.getMain().updateBreadcrumbs();"
                 ],
                 "name": "activate",
-                "scope": "me",
-                "designer|targetType": "Ext.Component",
-                "designer|controlQuery": "main > #cardCt > component"
+                "scope": "me"
             },
             "designerId": "522805c4-94a5-4df1-91ff-17c3ec0b851a"
         },
@@ -155,14 +155,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "breadcrumbs",
+                "designer|targetType": "Breadcrumbs",
                 "fn": "onBreadcrumbsBreadcrumbactivate",
                 "implHandler": [
                     "this.getCardCt().getLayout().setActiveItem(index);"
                 ],
                 "name": "breadcrumbactivate",
-                "scope": "me",
-                "designer|targetType": "Breadcrumbs",
-                "designer|controlQuery": "breadcrumbs"
+                "scope": "me"
             },
             "designerId": "53c54d91-0293-467d-8f0f-6d221690bda0"
         },
@@ -187,6 +187,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "panel",
+                "designer|targetType": "CustomerDetail",
                 "fn": "onNewOrder",
                 "implHandler": [
                     "var orderCard = this.getOrderDetail();",
@@ -199,9 +201,7 @@
                     "orderCard.startEditingNew();"
                 ],
                 "name": "neworder",
-                "scope": "me",
-                "designer|targetType": "CustomerDetail",
-                "designer|controlQuery": "panel"
+                "scope": "me"
             },
             "designerId": "8f13533a-72f7-4ee0-8f20-eb9e05dd0033"
         },
@@ -213,14 +213,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "panel",
+                "designer|targetType": "OrderDetail",
                 "fn": "onOrderCancel",
                 "implHandler": [
                     "this.getCardCt().getLayout().setActiveItem(this.getCustomerDetail());"
                 ],
                 "name": "ordercancel",
-                "scope": "me",
-                "designer|targetType": "OrderDetail",
-                "designer|controlQuery": "panel"
+                "scope": "me"
             },
             "designerId": "b570d1df-f169-4f91-b3fa-e06ddfd6131c"
         },
@@ -232,6 +232,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|controlQuery": "panel",
+                "designer|targetType": "OrderDetail",
                 "fn": "onOrderSave",
                 "implHandler": [
                     "var me = this,",
@@ -263,9 +265,7 @@
                     ""
                 ],
                 "name": "ordersave",
-                "scope": "me",
-                "designer|targetType": "OrderDetail",
-                "designer|controlQuery": "panel"
+                "scope": "me"
             },
             "designerId": "dbc4ae07-ce3d-4cb5-9d3b-36d4b423d32d"
         }

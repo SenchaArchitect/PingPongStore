@@ -8,12 +8,12 @@
     "userConfig": {
         "container|align": "stretch",
         "container|padding": 10,
-        "height": null,
-        "width": null,
-        "designer|userClassName": "CustomerDetail",
         "designer|userAlias": "customerdetail",
+        "designer|userClassName": "CustomerDetail",
+        "height": null,
         "layout": "vbox",
-        "title": "{name}"
+        "title": "{name}",
+        "width": null
     },
     "designerId": "45be5b30-b97b-4211-85f1-7c13008db6fc",
     "cn": [
@@ -25,13 +25,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": null,
+                "bodyPadding": null,
                 "container|align": "stretch",
                 "container|padding": 10,
                 "height": 173,
-                "padding": null,
                 "layout": "hbox",
-                "bodyPadding": null,
+                "layout|flex": null,
+                "padding": null,
                 "title": null
             },
             "designerId": "8e5f0bfd-639b-4c1f-b85a-a2d2a3cb6185",
@@ -59,15 +59,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1,
-                        "height": null,
-                        "width": 400,
-                        "designer|displayName": "Chart",
                         "animate": [
                             "true"
                         ],
+                        "designer|displayName": "Chart",
+                        "height": null,
                         "insetPadding": 5,
-                        "store": "PeriodTotals"
+                        "layout|flex": 1,
+                        "store": "PeriodTotals",
+                        "width": 400
                     },
                     "designerId": "c2f10ee6-6fe1-44f4-9274-6b5c86b0871f",
                     "isBuiltIn": true,
@@ -100,6 +100,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|displayName": "Quarter",
                                 "fields": [
                                     "quarter"
                                 ],
@@ -112,7 +113,6 @@
                                     "    }",
                                     "}"
                                 ],
-                                "designer|displayName": "Quarter",
                                 "title": null
                             },
                             "designerId": "956edbbd-7a0f-46f5-ad80-ba862112bfc5"
@@ -125,8 +125,28 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "axis": [
+                                    "left"
+                                ],
+                                "fill": true,
+                                "markerConfig": [
+                                    "{",
+                                    "    type: 'circle',",
+                                    "    radius: 5,",
+                                    "    fill: '#4db8ed',",
+                                    "    stroke: 'none'",
+                                    "}"
+                                ],
                                 "shadowAttributes": [
                                     "[]"
+                                ],
+                                "smooth": null,
+                                "style": [
+                                    "{",
+                                    "stroke: '#4db8ed',",
+                                    "'stroke-width': 3,",
+                                    "fill: '#a6dcf6'",
+                                    "}"
                                 ],
                                 "tips": [
                                     "{",
@@ -139,29 +159,9 @@
                                     "    }",
                                     "}"
                                 ],
-                                "axis": [
-                                    "left"
-                                ],
                                 "xField": "quarter",
                                 "yField": [
                                     "total"
-                                ],
-                                "fill": true,
-                                "markerConfig": [
-                                    "{",
-                                    "    type: 'circle',",
-                                    "    radius: 5,",
-                                    "    fill: '#4db8ed',",
-                                    "    stroke: 'none'",
-                                    "}"
-                                ],
-                                "smooth": null,
-                                "style": [
-                                    "{",
-                                    "stroke: '#4db8ed',",
-                                    "'stroke-width': 3,",
-                                    "fill: '#a6dcf6'",
-                                    "}"
                                 ]
                             },
                             "designerId": "6ba5805a-84a8-4a85-a6d1-406f6a605d00"
@@ -178,11 +178,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": null,
-                "layout|margins": "10 0",
                 "container|align": "stretch",
                 "designer|displayName": "button container",
-                "layout": "hbox"
+                "layout": "hbox",
+                "layout|flex": null,
+                "layout|margins": "10 0"
             },
             "designerId": "c9c29c6b-5194-473f-96ac-6a8c6e5feb9c",
             "cn": [
@@ -229,13 +229,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
+                "disableSelection": true,
                 "frame": null,
                 "itemId": "ordersGrid",
-                "title": null,
-                "disableSelection": true,
+                "layout|flex": 1,
                 "sortableColumns": null,
-                "store": "Orders"
+                "store": "Orders",
+                "title": null
             },
             "configAlternates": {
                 "header": "object"
@@ -268,8 +268,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "orderNo",
-                        "text": "Orders",
-                        "flex": 1
+                        "flex": 1,
+                        "text": "Orders"
                     },
                     "designerId": "e6d98d35-955f-4259-b7d8-a9947266c235"
                 },
@@ -349,10 +349,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "setCustomer",
                 "designer|params": [
                     "customer"
                 ],
+                "fn": "setCustomer",
                 "implHandler": [
                     "this.setTitle(customer.get('name'));",
                     "this.down('contactinfo').update(customer.getData());",

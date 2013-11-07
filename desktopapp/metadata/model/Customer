@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "customerId",
-        "designer|userClassName": "Customer"
+        "designer|userClassName": "Customer",
+        "idProperty": "customerId"
     },
     "designerId": "b2f563ae-b95d-4e23-a44f-305f84c8d03b",
     "cn": [

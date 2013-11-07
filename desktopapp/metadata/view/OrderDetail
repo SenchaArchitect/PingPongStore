@@ -8,12 +8,12 @@
     "userConfig": {
         "container|align": "stretch",
         "container|padding": 10,
-        "height": null,
-        "width": null,
-        "designer|userClassName": "OrderDetail",
         "designer|userAlias": "orderdetail",
+        "designer|userClassName": "OrderDetail",
+        "height": null,
         "layout": "vbox",
-        "title": "{name}"
+        "title": "{name}",
+        "width": null
     },
     "designerId": "0a9752c8-bc70-40f4-81d8-03830635dc63",
     "cn": [
@@ -25,9 +25,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": null,
                 "layout|flex": null,
-                "layout|margins": "0 0 10",
-                "designer|displayName": null
+                "layout|margins": "0 0 10"
             },
             "designerId": "5789d8ad-51f7-4b11-909e-7bf23df45be1",
             "cn": [
@@ -39,8 +39,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "addBtn",
                         "iconCls": "icon-add",
+                        "itemId": "addBtn",
                         "scale": null,
                         "text": "New Item"
                     },
@@ -75,12 +75,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
                 "designer|displayName": "Order Items Grid",
-                "title": null,
                 "disableSelection": true,
+                "layout|flex": 1,
                 "sortableColumns": false,
-                "store": "LineItems"
+                "store": "LineItems",
+                "title": null
             },
             "designerId": "75f4fcde-fe01-4199-8162-46c672a3e1e8",
             "cn": [
@@ -93,8 +93,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "itemId",
-                        "text": "Item",
-                        "flex": 1
+                        "flex": 1,
+                        "text": "Item"
                     },
                     "designerId": "6c3ac11e-ae41-424b-ba2b-0b45f6715b8f",
                     "cn": [
@@ -121,10 +121,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|displayName": "tpl",
                                 "implHandler": [
                                     "{itemName}"
-                                ],
-                                "designer|displayName": "tpl"
+                                ]
                             },
                             "designerId": "6235fa96-c37a-4608-a343-f38b8a93d04d"
                         }
@@ -194,12 +194,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onGridpanelEdit",
                         "designer|params": [
                             "editor",
                             "context",
                             "eOpts"
                         ],
+                        "fn": "onGridpanelEdit",
                         "implHandler": [
                             "var store = context.grid.getStore(),",
                             "    record = context.record,",
@@ -229,8 +229,8 @@
                     },
                     "codeClass": "Ext.grid.plugin.CellEditing",
                     "userConfig": {
-                        "pluginId": "edit",
-                        "clicksToEdit": 1
+                        "clicksToEdit": 1,
+                        "pluginId": "edit"
                     },
                     "designerId": "d6cb2b87-b274-4154-9bcd-9da07c56a5b4",
                     "cn": [
@@ -277,14 +277,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": null,
-                "layout|margins": "0 0 20",
                 "cls": "orderTotals",
                 "data": [
                     "{subTotal: 12345, shipping: 12, tax: 23, total: 12380}"
                 ],
+                "designer|displayName": null,
                 "itemId": "totals",
-                "designer|displayName": null
+                "layout|flex": null,
+                "layout|margins": "0 0 20"
             },
             "mockCfgs": [
                 "data"
@@ -299,6 +299,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|displayName": "tpl",
                         "implHandler": [
                             "<table>",
                             "    <tr><th>Sub Total</th><td>{subTotal:currency}</td></tr>",
@@ -306,8 +307,7 @@
                             "    <tr><th>Tax</th><td>{tax:currency}</td></tr>",
                             "    <tr class=\"total\"><th>Grand Total</th><td>{total:currency}</td></tr>",
                             "</table>"
-                        ],
-                        "designer|displayName": "tpl"
+                        ]
                     },
                     "designerId": "b9a0603b-c789-4aa0-ae9f-ca788e3e3e38"
                 }
@@ -321,16 +321,16 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": null,
-                "layout|margins": null,
                 "container|align": "stretch",
                 "container|defaultMargins": [
                     "0 0 0 10"
                 ],
                 "container|pack": "end",
-                "itemId": "buttonCt",
                 "designer|displayName": null,
-                "layout": "hbox"
+                "itemId": "buttonCt",
+                "layout": "hbox",
+                "layout|flex": null,
+                "layout|margins": null
             },
             "designerId": "98af5fcf-235c-4246-a9cb-6ab67622a5d6",
             "cn": [
@@ -342,11 +342,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "cancelBtn",
-                        "ui": null,
                         "iconCls": "icon-cancel",
+                        "itemId": "cancelBtn",
                         "scale": null,
-                        "text": "Cancel"
+                        "text": "Cancel",
+                        "ui": null
                     },
                     "designerId": "92eae3ea-69b0-4566-ac0f-b54809a08fcc",
                     "cn": [
@@ -378,8 +378,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": null,
-                        "itemId": "saveBtn",
                         "iconCls": "icon-save",
+                        "itemId": "saveBtn",
                         "scale": null,
                         "text": "Save"
                     },
@@ -414,10 +414,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "setCustomer",
                 "designer|params": [
                     "customer"
                 ],
+                "fn": "setCustomer",
                 "implHandler": [
                     "var me = this;",
                     "//me.child('contactinfo').update(customer.getData());",
@@ -434,10 +434,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "setOrder",
                 "designer|params": [
                     "order"
                 ],
+                "fn": "setOrder",
                 "implHandler": [
                     "var addButton = this.down('#addBtn'),",
                     "    buttons = this.child('#buttonCt'),",

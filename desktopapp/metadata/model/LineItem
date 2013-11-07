@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "lineItemId",
-        "designer|userClassName": "LineItem"
+        "designer|userClassName": "LineItem",
+        "idProperty": "lineItemId"
     },
     "designerId": "01039786-0d8e-4953-bbd4-dc087de95933",
     "cn": [

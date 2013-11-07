@@ -7,9 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": false,
-        "model": "Order",
-        "storeId": "Orders",
-        "designer|userClassName": "Orders",
         "data": [
             "[",
             "    {orderNo: \"ADR1123123\", id: 200, orderDate: \"2013-01-12T00:00:00.000Z\", shippedDate: \"2013-01-12T00:00:00.000Z\", total: 975.25, balance: 123, subTotal: 79900, shipping: 25.25, tax: 50, customer: null},",
@@ -18,7 +15,10 @@
             "    {orderNo: \"SSP8000318\", id: 203, orderDate: \"2012-03-01T00:00:00.000Z\", shippedDate: \"2012-03-01T00:00:00.000Z\", total: 345.67, balance: 234, subTotal: 0, shipping: 0, tax: 22, customer: null},",
             "    {orderNo: \"ATR1008342\", id: 201, orderDate: \"2012-01-12T00:00:00.000Z\", shippedDate: \"2012-01-12T00:00:00.000Z\", total: 456.78, balance: 345, subTotal: 0, shipping: 20, tax: 50, customer: null}",
             "]"
-        ]
+        ],
+        "designer|userClassName": "Orders",
+        "model": "Order",
+        "storeId": "Orders"
     },
     "mockCfgs": [
         "data"

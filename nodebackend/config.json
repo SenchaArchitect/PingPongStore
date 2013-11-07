@@ -4,7 +4,7 @@
     "MySQL_HOSTNAME": "127.0.0.1",
     "MySQL_PORT": 3306,
     "MySQL_USER": "root",
-    "MySQL_PASSWORD": "thetestpassword",
+    "MySQL_PASSWORD": "",
     "MySQL_DB": "orders",
 
     "EXTDIRECT_NAMESPACE" : "Fulfill.ss",

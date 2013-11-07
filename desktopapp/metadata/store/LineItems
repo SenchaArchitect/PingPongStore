@@ -7,9 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": false,
-        "model": "LineItem",
-        "storeId": "LineItems",
-        "designer|userClassName": "LineItems",
         "data": [
             "",
             "[",
@@ -17,7 +14,10 @@
             "    {id:1002, quantityOrdered:100, perUnitPrice:299, itemId:2, totalPrice: 29900, itemName: 'Second Item'}",
             "]",
             ""
-        ]
+        ],
+        "designer|userClassName": "LineItems",
+        "model": "LineItem",
+        "storeId": "LineItems"
     },
     "mockCfgs": [
         "data"

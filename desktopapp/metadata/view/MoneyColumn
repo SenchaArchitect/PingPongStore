@@ -6,10 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "MoneyColumn",
-        "designer|userAlias": "moneycolumn",
         "align": "right",
         "dataIndex": "0",
+        "designer|userAlias": "moneycolumn",
+        "designer|userClassName": "MoneyColumn",
         "text": null
     },
     "designerId": "3b87262b-6812-4db7-89eb-adb0c4ce8627",
@@ -22,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "renderer",
                 "designer|params": [
                     "value",
                     "metaData",
@@ -32,6 +31,7 @@
                     "store",
                     "view"
                 ],
+                "fn": "renderer",
                 "implHandler": [
                     "return Ext.util.Format.currency(value);"
                 ]

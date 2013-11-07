@@ -7,9 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
+        "designer|userClassName": "Customers",
         "model": "Customer",
-        "storeId": "Customers",
-        "designer|userClassName": "Customers"
+        "storeId": "Customers"
     },
     "designerId": "6d36e801-38ee-4212-bcaa-a46f90380db4",
     "cn": [

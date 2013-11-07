@@ -1,0 +1,14 @@
+{
+   "name": "Orders",
+   "requires": [],
+   "id": "ab90ea89-611c-4612-9bff-72818b9ec351",
+   "resources": [
+      "resources/css/style.css"
+   ],
+   "_architect": {
+      "_comment": "Please don't edit. This is Architect data.",
+      "resources": [
+         "resources/css/style.css"
+      ]
+   }
+}

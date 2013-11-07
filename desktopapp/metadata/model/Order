@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "orderId",
-        "designer|userClassName": "Order"
+        "designer|userClassName": "Order",
+        "idProperty": "orderId"
     },
     "designerId": "7715829a-95ff-43cf-b3ea-6d2ef294fb7c",
     "cn": [

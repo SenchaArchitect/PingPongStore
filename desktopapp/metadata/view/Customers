@@ -8,12 +8,12 @@
     "userConfig": {
         "container|align": "stretch",
         "container|padding": 10,
-        "height": null,
-        "width": null,
-        "designer|userClassName": "Customers",
         "designer|userAlias": "customers",
+        "designer|userClassName": "Customers",
+        "height": null,
         "layout": "vbox",
-        "title": "Customers"
+        "title": "Customers",
+        "width": null
     },
     "designerId": "1e53f66b-c073-443e-bad5-3b3a4753ad9c",
     "cn": [
@@ -26,8 +26,8 @@
             "codeClass": null,
             "userConfig": {
                 "container|align": "stretch",
-                "height": 210,
                 "designer|displayName": "Charts",
+                "height": 210,
                 "layout": "hbox"
             },
             "designerId": "069ca559-b995-48f2-98da-16afd8f37667",
@@ -40,14 +40,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 3,
-                        "height": null,
-                        "width": null,
-                        "designer|displayName": "Qtr vs Qtr column chart",
                         "animate": [
                             "true"
                         ],
-                        "store": "CustomerCategories"
+                        "designer|displayName": "Qtr vs Qtr column chart",
+                        "height": null,
+                        "layout|flex": 3,
+                        "store": "CustomerCategories",
+                        "width": null
                     },
                     "designerId": "f8c4dd1d-d294-4d12-9851-2513b03031c4",
                     "isBuiltIn": true,
@@ -62,10 +62,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "dashSize": 0,
                                 "fields": [
                                     "category"
                                 ],
-                                "dashSize": 0,
                                 "title": null
                             },
                             "designerId": "b258f365-bdee-4b32-ad7b-1217f84149c1"
@@ -99,6 +99,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "groupGutter": 0,
+                                "gutter": 20,
                                 "shadowAttributes": [
                                     "[]"
                                 ],
@@ -119,9 +121,7 @@
                                 "yField": [
                                     "priorQtrTotal",
                                     "currentQtrTotal"
-                                ],
-                                "groupGutter": 0,
-                                "gutter": 20
+                                ]
                             },
                             "designerId": "cd016a6c-7d46-4851-a0f5-3b4c2dbacc32",
                             "cn": [
@@ -133,7 +133,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fn": "renderer",
                                         "designer|params": [
                                             "sprite",
                                             "record",
@@ -141,6 +140,7 @@
                                             "index",
                                             "store"
                                         ],
+                                        "fn": "renderer",
                                         "implHandler": [
                                             "var colors = ['#3299cc', '#9bcde7', '#4db8ed', '#a6dcf6', '#8ebf2b', '#c6e192', '#1e7069', '#8eb8b4'];",
                                             "attributes.fill = colors[index];",
@@ -161,17 +161,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": null,
-                        "height": null,
-                        "width": 350,
-                        "designer|displayName": "Pie Chart",
-                        "shadow": false,
                         "animate": [
                             "true"
                         ],
+                        "designer|displayName": "Pie Chart",
+                        "height": null,
                         "insetPadding": 20,
+                        "layout|flex": null,
+                        "shadow": false,
                         "store": "CustomerCategories",
-                        "theme": null
+                        "theme": null,
+                        "width": 350
                     },
                     "designerId": "49041358-58ff-4fce-b744-9390f90b1bf9",
                     "isBuiltIn": true,
@@ -186,6 +186,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "angleField": "count",
+                                "colorSet": [
+                                    "['#9bcde7', '#a6dcf6', '#c6e192', '#8eb8b4']"
+                                ],
+                                "designer|displayName": "Inner Pie Slices",
+                                "donut": 45,
                                 "label": [
                                     "{field: 'category'}"
                                 ],
@@ -197,13 +203,7 @@
                                     "        this.update('Count: ' + record.get('count'));",
                                     "    }",
                                     "}"
-                                ],
-                                "designer|displayName": "Inner Pie Slices",
-                                "angleField": "count",
-                                "colorSet": [
-                                    "['#9bcde7', '#a6dcf6', '#c6e192', '#8eb8b4']"
-                                ],
-                                "donut": 45
+                                ]
                             },
                             "designerId": "c06cebbd-d0df-4f79-af43-0442d1dee9dd"
                         },
@@ -215,6 +215,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "angleField": "count",
+                                "colorSet": [
+                                    "['#3299cc', '#4db8ed', '#8ebf2b', '#1e7069']"
+                                ],
+                                "designer|displayName": "Outer Pie Slices",
+                                "donut": 60,
                                 "label": [
                                     "{",
                                     "    field: 'category',",
@@ -239,13 +245,7 @@
                                     "    }",
                                     "}"
                                 ],
-                                "title": null,
-                                "designer|displayName": "Outer Pie Slices",
-                                "angleField": "count",
-                                "colorSet": [
-                                    "['#3299cc', '#4db8ed', '#8ebf2b', '#1e7069']"
-                                ],
-                                "donut": 60
+                                "title": null
                             },
                             "designerId": "d15e4172-27d3-4528-8f76-0f8e35eb8c3a"
                         },
@@ -277,12 +277,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
                 "data": null,
                 "designer|displayName": "Grid",
-                "title": "",
                 "disableSelection": true,
-                "store": "Customers"
+                "layout|flex": 1,
+                "store": "Customers",
+                "title": ""
             },
             "mockCfgs": [
                 "data"
@@ -298,8 +298,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "name",
-                        "text": "Customer",
-                        "flex": 1
+                        "flex": 1,
+                        "text": "Customer"
                     },
                     "designerId": "e30ce354-c6c4-4cb0-9b3f-f625fcddabd7"
                 },
@@ -311,9 +311,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 145,
                         "dataIndex": "address",
-                        "text": "StreetAddress"
+                        "text": "StreetAddress",
+                        "width": 145
                     },
                     "designerId": "32e97bf8-fa08-4793-8581-1223a3510ac7"
                 },
@@ -325,9 +325,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 101,
                         "dataIndex": "city",
-                        "text": "City"
+                        "text": "City",
+                        "width": 101
                     },
                     "designerId": "88b09276-3338-43b6-a54e-ec0b5bbc4d04"
                 },
@@ -339,9 +339,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 65,
                         "dataIndex": "state",
-                        "text": "State"
+                        "text": "State",
+                        "width": 65
                     },
                     "designerId": "9e43f27e-97c7-4775-bcf8-ee10678a8d10"
                 },
@@ -353,9 +353,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": 76,
                         "dataIndex": "zip",
-                        "text": "Zip"
+                        "text": "Zip",
+                        "width": 76
                     },
                     "designerId": "f8377788-1e47-430e-a9b6-c86fd40efb3f"
                 },

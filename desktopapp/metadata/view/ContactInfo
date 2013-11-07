@@ -18,9 +18,9 @@
             "    fax: '(123) 234-3456'",
             "}"
         ],
-        "margin": "0 0 10",
+        "designer|userAlias": "contactinfo",
         "designer|userClassName": "ContactInfo",
-        "designer|userAlias": "contactinfo"
+        "margin": "0 0 10"
     },
     "mockCfgs": [
         "data"
@@ -35,13 +35,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "tpl",
                 "implHandler": [
                     "<div class=\"name\">{name}</div>",
                     "<div class=\"address\">{address}<br>{city}, {state} {zip}</div>",
                     "<div class=\"phone\">Phone: {phone}</div>",
                     "<div class=\"phone\">Fax: {fax}</div>"
-                ],
-                "designer|displayName": "tpl"
+                ]
             },
             "designerId": "e7b7c74b-e1e0-4ecc-937d-612da72987e4"
         }

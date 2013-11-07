@@ -7,10 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "autoLoad": true,
-        "model": "CustomerCategory",
-        "storeId": "MyStore4",
+        "data": null,
         "designer|userClassName": "CustomerCategories",
-        "data": null
+        "model": "CustomerCategory",
+        "storeId": "MyStore4"
     },
     "designerId": "ccd090cc-4ddb-4468-90e3-1aa75e4bbef9",
     "cn": [
