@@ -3,7 +3,7 @@ Ping-Pong Store
 
 To get set up...
 
-1. Clone that and `cd` into *nodebackend*.
+1. Clone the git repository and `cd` into *nodebackend*.
 2. `npm install` to install the dependences
 3. Make a directory called "public" (`mkdir public`).
 4. Do some symlinking:
