@@ -1,7 +1,7 @@
 {
    "name": "Orders",
    "requires": [],
-   "id": "ab90ea89-611c-4612-9bff-72818b9ec351",
+   "id": "051af003-2b10-4877-b1bf-0dad9b7b77af",
    "resources": [
       "resources/css/style.css"
    ],
@@ -9,6 +9,7 @@
       "_comment": "Please don't edit. This is Architect data.",
       "resources": [
          "resources/css/style.css"
-      ]
+      ],
+      "requires": []
    }
 }

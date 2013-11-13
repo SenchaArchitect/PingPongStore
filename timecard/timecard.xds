@@ -30,9 +30,9 @@
         }
     },
     "xdsVersion": "3.0.0",
-    "xdsBuild": 1328,
+    "xdsBuild": 1337,
     "schemaVersion": 1,
-    "upgradeVersion": 300000000002,
+    "upgradeVersion": 300000000003,
     "framework": "touch23",
     "viewOrderMap": {
         "view": [
